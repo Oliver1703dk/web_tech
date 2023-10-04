@@ -3,10 +3,10 @@
 <html>
 <head>
 <title>Hej</title>
-
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<div class="bg-[url('images/BNG.png')]">
 <div class="w-96 h-96 relative">
     <div class="w-96 h-96 left-[414px] top-[205px] absolute">
         <div class="w-96 h-96 left-0 top-0 absolute bg-neutral-900 rounded-2xl shadow"></div>
@@ -26,7 +26,7 @@
     </div>
     <div class="left-[567px] top-[99px] absolute text-white text-5xl font-normal font-['Krona One']">Welcome</div>
 </div>
-
+</div>
 </body>
 
 </html>
