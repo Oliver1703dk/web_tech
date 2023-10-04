@@ -4,6 +4,7 @@
 <head>
 <title>Hej</title>
 
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <div class="w-96 h-96 relative">
