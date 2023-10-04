@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang ="en">
 <head>
 <title>Hej</title>
 <script src="https://cdn.tailwindcss.com"></script>
