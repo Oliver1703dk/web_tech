@@ -2,34 +2,70 @@
 
 <html lang ="en">
 <head>
-<title>Hej</title>
+<title>Index</title>
 <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/mail.css' rel='stylesheet'>
+
 </head>
-<body>
-<div class="w-96 h-full relative bg-cyan-950">
-    <div class="w-96 h-full left-[414px] top-[205px] absolute">
-        <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-blue-300 rounded-2xl shadow"></div>
-        <div class="w-80 h-12 left-[38px] top-[99px] absolute bg-white rounded-2xl shadow"></div>
-        <div class="left-[38px] top-[27px] absolute text-white text-5xl font-normal font-['Krona One']">E-mail
-        <div class="w-80 h-12 left-[42px] top-[237px] absolute bg-white rounded-2xl shadow"></div>
-        <div class="left-[42px] top-[165px] absolute text-white text-5xl font-normal font-['Krona One']">Password</div>
-        <div class="w-80 h-12 left-[43px] top-[375px] absolute bg-white rounded-2xl shadow"></div>
-        <div class="left-[43px] top-[307px] absolute text-white text-4xl font-normal font-['Krona One']">Repeat password</div>
-        <div class="w-96 h-12 left-[42px] top-[516px] absolute bg-white rounded-2xl shadow"></div>
-        <div class="left-[42px] top-[444px] absolute text-white text-5xl font-normal font-['Krona One']">Phone Number</div>
-        <div class="w-16 h-16 left-[498px] top-[294px] absolute"></div>
-        <div class="w-96 h-16 left-[69px] top-[605px] absolute">
-            <div class="w-96 h-16 left-0 top-0 absolute bg-amber-500 rounded-2xl shadow hover:bg-amber-200"></div>
-            <div class="left-[13px] top-[3px] absolute text-white text-5xl font-normal font-['Krona One'] ">Create Account</div>
-        </div>
+
+<body class="bg-[url(https://i.ibb.co/19T0fGW/BNG.png)] bg-cover min-h-screen">
+    <div class="w-96 h-full">
+    <div class="w-96 h-full left-[500px] top-[80px] absolute">
+        <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-gray-950 rounded-2xl shadow"></div>
+        <!-- Here start the component -->
+       <label class="block mb-1.5 ml-6 mt-4 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">E-mail</label>
+<div class="relative mb-6  ml-8 w-full">
+    <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 12">
+            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+            <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+        </svg>
     </div>
-    <div class="left-[567px] top-[99px] absolute text-black text-5xl font-normal font-['Krona One']">Welcome
-    <svg xmlns="http://www.w3.org/2000/svg" fill="2" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-amber-400">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
-    </svg>
-    </div>
+    <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
 </div>
+        <!-- Here Ends the component -->
+        <label class="block mb-1.5 ml-6 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">Password</label>
+        <div class="relative mb-6 ml-8  w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 22">
+                    <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"></path>
+                </svg>
+            </div>
+            <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ThisIsAVailidPassword">
+        </div>
+        <!-- Here start the component -->
+        <label class="block mb-1.5 ml-6 mt-4 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">E-mail</label>
+        <div class="relative mb-6  ml-8 w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 12">
+                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                </svg>
+            </div>
+            <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
+        </div>
+        <!-- Here Ends the component -->
+
+        <!-- Here start the component -->
+        <label class="block mb-1.5 ml-6 mt-4 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">E-mail</label>
+        <div class="relative mb-6  ml-8 w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 12">
+                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                </svg>
+            </div>
+            <input type="text" id="input-group-1" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
+        </div>
+        <!-- Here Ends the component -->
+
+        <!-- Here start the component -->
+        <div class="relative mb-6  ml-8">
+            <button type="button" class="text-white bg-yellow-400 font-medium rounded-2xl mr-2 mb-2 hover:bg-black">Create Account  </button>
+        </div>
+        <!-- Here Ends the component -->
+    </div>
+
 </div>
 </body>
 
