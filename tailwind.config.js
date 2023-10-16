@@ -6,12 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {
-            backgroundImage: {
-                'BNG': "url('/images/BNG.png')",
-            },
-
-        },
+        extend : {
+            fontFamily: {
+                'body': ['KronaOne']
+            }
+        }
     },
     plugins: [],
 }
