@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[url(http://placekitten.com/200/300)] bg-right-top ">
+<body class="bg-[url(http://placekitten.com/200/300)] backdrop-blur-sm ">
 <p class="text-4xl font-body">gjioeriojegjo gigegheruhi</p>
 <p class="text-4xl">gjioeriojegjo gigegheruhi</p>
 <p class="text-4xl font-serif">gjioeriojegjo gigegheruhi</p>
