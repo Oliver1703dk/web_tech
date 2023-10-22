@@ -11,7 +11,7 @@
 //TODO Make a sperate file for the the db conn
 $host = "127.0.0.1";  // Replace with your database host
 $username = "Kristoffer";  // Replace with your database username
-$password = "UnrealEngine5%";  // Replace with your database password
+$password = "";  // Replace with your database password
 $database = "productdb";  // Replace with your database name
 
 
