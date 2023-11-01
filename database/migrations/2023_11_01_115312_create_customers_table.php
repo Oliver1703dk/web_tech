@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table ->String('name');
+            //$table ->String('name');
             $table ->String('email');
             $table ->integer('phone');
-            $table ->String('address');
+            //$table ->String('address');
             $table ->String('password');
-            $table ->Bool('admin');
+            $table ->boolean('admin');
 
             $table->unsignedBigInteger('cart_id')->unique();
             $table->foreign('cart_id')->references('id')->on('carts');
