@@ -25,3 +25,6 @@ Route::get('/UserReg', function () {
     return view('UserReg');
 })->name('UserReg');
 
+Route::get('/CheckoutPage', function () {
+    return view('CheckoutPage');
+})->name('CheckoutPage');
