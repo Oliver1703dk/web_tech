@@ -14,10 +14,11 @@ class Customer extends Model
     private $password;
     private $email;
 
-    public function customer()
+    public function cart()
     {
-        return $this->belongsTo(Customer::class);
+        return $this->hasOne(Cart::class);
     }
+
 
 
     public function register() {

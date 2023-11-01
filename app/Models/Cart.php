@@ -14,15 +14,17 @@ class Cart extends Model
     private $items = [];
 
 
-    public function carts()
+    public function products()
     {
-        return $this->belongsToMany(Cart::class);
+        return $this->belongsToMany(Product::class);
+    }
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
     }
 
-    public function cart()
-    {
-        return $this->hasOne(Cart::class);
-    }
+
+
 
 
     public function addItem(Product $product) {

@@ -14,9 +14,17 @@ class Product extends Model
     private $price;
 
 
-    public function products()
+    public function carts()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Cart::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+
+
 
 }
