@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('/register', function () {
 })->name('register');
 
 
+Route::get('/UserReg', [RegistrationController::class, 'showRegistrationForm']);
+Route::post('/UserReg',[RegistrationController::class, 'register']);

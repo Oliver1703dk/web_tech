@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 
 <html lang ="en">
@@ -14,7 +9,7 @@
 <div class="w-96 h-full">
     <div class="w-96 h-full left-[500px] top-[80px] absolute">
         <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-gray-950 rounded-2xl shadow"></div>
-        <form method="POST" action="{{ route('index') }}">
+        <form method="POST" action="/UserReg">
         <!-- Here start the component -->
         <label class="block mb-1.5 ml-6 mt-4 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">E-mail</label>
         <div class="relative mb-6  ml-8 w-full">
@@ -60,7 +55,7 @@
 
         <!-- Here start the component -->
         <div class="relative mb-6 mt-12  ml-12 justify-center">
-            <button onclick="window.location.href='{{route('index')}}'" type="button" class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">Create Account</button>
+            <button type="button" class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">Create Account</button>
 
         </div>
         <!-- Here Ends the component -->
