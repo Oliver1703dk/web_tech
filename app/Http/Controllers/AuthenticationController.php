@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
-class AuthenticationController {
+class AuthenticationController extends Controller {
     public function login() {
         // Handle user login
     }

@@ -2,11 +2,23 @@
 
 namespace App\Models;
 
-class Customer {
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Customer extends Model
+{
+    use HasFactory;
+
     private $id;
     private $username;
     private $password;
     private $email;
+
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
+
 
     public function register() {
         // Implementation for user registration

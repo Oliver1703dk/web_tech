@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
-class CartController {
+class CartController extends Controller {
     public function addToCart(Product $product, Cart $cart) {
         // Add a product to the cart
     }
