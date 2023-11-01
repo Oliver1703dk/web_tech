@@ -13,6 +13,9 @@ class Customer extends Model
     private $username;
     private $password;
     private $email;
+    private $phone;
+    private $admin;
+    private $cart_id;
 
     public function cart()
     {
