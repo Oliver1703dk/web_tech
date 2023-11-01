@@ -1,33 +1,5 @@
 
 
-<?php
-$host = "127.0.0.1";  // Replace with your database host
-$username = "Kristoffer";  // Replace with your database username
-$password = "";  // Replace with your database password
-$database = "productdb";  // Replace with your database name
-
-$mysqli = new mysqli($host, $username, $password, $database);
-
-// Process form data
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $phone = $_POST["PhoneNumber"]
-
-    // Insert data into the database
-    $sql = "INSERT INTO ad_users (name, email, PhoneNumber) VALUES (name, email, PhoneNumber)";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bindParam(":name", $name);
-    $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":PhoneNumber", $email);
-
-    if ($stmt->execute()) {
-        echo "Data has been successfully inserted into the database.";
-    } else {
-        echo "Error inserting data into the database.";
-    }
-}
-    ?>
 
 
 

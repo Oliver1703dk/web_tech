@@ -25,3 +25,8 @@ Route::get('/UserReg', function () {
     return view('UserReg');
 })->name('UserReg');
 
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
+
+
