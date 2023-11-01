@@ -1,38 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Customer; // Import the Customer model
+use Illuminate\Support\Facades\Hash;
 
 class RegistrationController extends Controller
 {
-    public function showRegistrationForm()
+    public function UserReg()
     {
-        return view('UserReg'); // Make sure 'UserReg' Blade view exists
+        return view('UserReg');
     }
-
-    public function register(Request $request)
+    public function UserRegPost(Request $request)
     {
-        // Handle user registration
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:customers', // Update to 'customers' table
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+        $user = new User();
 
-        // Create and save the user
-        $customer = new Customer([
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'password' => bcrypt($request->input('password')),
-        ]);
-        $customer->save();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        //$user->phone_number = $request->phone_number;
 
-        // Log in the user (optional)
-        auth()->login($customer);
+        $user->save();
 
-        // Redirect to a success page
-        return redirect('/index');
+        return back()->with('sucess', 'Register sucessfully');
     }
 }
