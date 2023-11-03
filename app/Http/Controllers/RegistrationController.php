@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Cart;
 use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,6 +15,11 @@ class RegistrationController extends Controller
     }
     public function UserRegPost(Request $request)
     {
+
+        // Create a new Cart and associate it with the customer
+        $cart = new Cart();
+        $cart->save();
+
 //        $user = new User();
         $customer = new Customer();
 
@@ -29,6 +35,15 @@ class RegistrationController extends Controller
 
 
         $customer->save();
+
+
+
+
+        // Set the customer's cart_id to the newly created cart's ID
+        $customer->cart_id = $cart->id;
+        $customer->save();
+
+
 
         return back()->with('sucess', 'Register sucessfully');
     }

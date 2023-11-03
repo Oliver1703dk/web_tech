@@ -24,6 +24,7 @@ class Customer extends Model
 
 
 
+
     public function register() {
         // Implementation for user registration
     }
