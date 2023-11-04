@@ -27,11 +27,15 @@ Route::get('/UserReg', function () {
     return view('UserReg');
 })->name('UserReg');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+
+//Route::get('/register', function () {
+//    return view('register');
+//})->name('register');
 
 
 Route::get('/UserReg' , [RegistrationController::class, 'UserReg'])->name('UserReg');
 Route::post('/UserReg', [RegistrationController::class, 'UserRegPost'])->name('UserReg');
 //Route::post('/UserReg', 'RegistrationController@UserRegPost');
+
+Route::get("/Login", [RegistrationController::class, 'Login'])->name('Login');
+Route::post('/Login', [RegistrationController::class, 'LoginPost'])->name('Login');

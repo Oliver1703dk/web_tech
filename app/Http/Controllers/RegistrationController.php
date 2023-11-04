@@ -6,12 +6,17 @@ use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class RegistrationController extends Controller
 {
     public function UserReg()
     {
         return view('UserReg');
+    }
+    public function Login()
+    {
+        return view('Login');
     }
     public function UserRegPost(Request $request)
     {
@@ -47,4 +52,18 @@ class RegistrationController extends Controller
 
         return back()->with('sucess', 'Register sucessfully');
     }
+
+    public function LoginPost(Request $request)
+    {
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+
+        if (Auth::attempt($credentials)) {
+            return redirect('/index')->with('success', 'Login');
+        }
+        return back()->with('error', 'Email or password');
+    }
+
 }
