@@ -7,9 +7,12 @@
 </head>
 <body class="bg-[url(https://ibb.co/n67NGzH)] bg-cover min-h-screen">
 <div class="w-96 h-full">
-
+    @if(Session::has('success'))
+        <div class="alert alert-success" role="alert">
+            {{Session::get('success')}}
+        </div>
+    @endif
     <div class="w-96 h-full left-[500px] top-[80px] absolute">
-        {{Session::get('sucess')}}
         <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-gray-950 rounded-2xl shadow"></div>
 
         <form method="POST" action={{route('UserReg')}}>
