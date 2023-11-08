@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\AuthenticationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +31,14 @@ Route::get('/UserReg', function () {
 Route::get('/CheckoutPage', function () {
     return view('CheckoutPage');
 })->name('CheckoutPage');
+
+//Route::get('/register', function () {
+//    return view('register');
+//})->name('register');
+
+
+Route::get('/UserReg' , [RegistrationController::class, 'UserReg'])->name('UserReg');
+Route::post('/UserReg', [RegistrationController::class, 'UserRegPost'])->name('UserReg');
+
+Route::get("/Login", [AuthenticationController::class, 'Login'])->name('Login');
+Route::post('/Login', [AuthenticationController::class, 'LoginPost'])->name('Login');
