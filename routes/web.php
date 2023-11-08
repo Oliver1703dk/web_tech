@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,10 @@ Route::get('/CheckoutPage', function () {
     return view('CheckoutPage');
 })->name('CheckoutPage');
 
+Route::get('/Products', function (){
+    return view('Products');
+})->name('Products');
+
 //Route::get('/register', function () {
 //    return view('register');
 //})->name('register');
@@ -42,3 +47,7 @@ Route::post('/UserReg', [RegistrationController::class, 'UserRegPost'])->name('U
 
 Route::get("/Login", [AuthenticationController::class, 'Login'])->name('Login');
 Route::post('/Login', [AuthenticationController::class, 'LoginPost'])->name('Login');
+
+//Route to products.
+Route::get('/Products',[ProductController::class, 'Products'])->name('Products');
+Route::post('/Products',[ProductController::class, 'ProductsPost'])->name('Products');
