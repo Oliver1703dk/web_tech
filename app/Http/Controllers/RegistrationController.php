@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class RegistrationController extends Controller
 {
-    public function UserReg()
+    public function userReg()
     {
-        return view('UserReg');
+        return view('userReg');
     }
 
-    public function UserRegPost(Request $request)
+    public function userRegPost(Request $request)
     {
 
         // Create a new Cart and associate it with the customer
@@ -32,9 +32,11 @@ class RegistrationController extends Controller
         $user->cart_id;
 
         $user->cart_id = $cart->id;
+
         $user->save();
 
-        return back()->with('success', 'Register sucessfully');
+        return redirect(route('index'))->with('success', 'Register sucessfully');
+//        return back()->with('success', 'Register sucessfully');
 
 
 //        // Create a new Cart and associate it with the customer

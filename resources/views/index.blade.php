@@ -40,10 +40,23 @@
                    class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
                     Cart
                 </a>
-                <a href="Login"
+                @guest()
+                <a href="login"
                    class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
                     Log in
                 </a>
+                @endguest
+                @auth()
+                    <form method="POST" action={{route('logoutPost')}}>
+                        @csrf
+                        <label>
+                            <button type = "submit" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
+                                Sign out
+                            </button>
+                        </label>
+
+                    </form>
+                @endauth
             </div>
         </div>
     </nav>
@@ -92,6 +105,7 @@
                     <h2 class="text-lg font-semibold">Product 1</h2>
                     <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
                 </article>
+
             </div>
         </section>
     </div>
