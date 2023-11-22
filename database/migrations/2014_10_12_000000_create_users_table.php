@@ -13,13 +13,26 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
+            //$table ->String('name');
+            $table ->String('email');
+            $table ->integer('phone');
+            //$table ->String('address');
+            $table ->String('password');
+            $table ->boolean('admin');
+
+            $table->unsignedBigInteger('cart_id')->unique();
+            $table->foreign('cart_id')->references('id')->on('carts');
         });
+//        Schema::create('users', function (Blueprint $table) {
+//            $table->id();
+//            $table->string('name');
+//            $table->string('email')->unique();
+//            $table->timestamp('email_verified_at')->nullable();
+//            $table->string('password');
+//            $table->rememberToken();
+//            $table->timestamps();
+//        });
     }
 
     /**

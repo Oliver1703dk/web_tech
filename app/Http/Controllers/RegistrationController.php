@@ -10,41 +10,53 @@ use Illuminate\Support\Facades\Auth;
 
 class RegistrationController extends Controller
 {
-    public function UserReg()
+    public function userReg()
     {
-        return view('UserReg');
+        return view('userReg');
     }
 
-    public function UserRegPost(Request $request)
+    public function userRegPost(Request $request)
     {
 
         // Create a new Cart and associate it with the customer
         $cart = new Cart();
         $cart->save();
 
-//        $user = new User();
-        $customer = new Customer();
+        $user = new User();
 
-        $customer->email = $request->email;
-        $customer->password = $request->password;
+        $user->email = $request->email;
+        $user->password = $request->password;
         //$customer->password = Hash::make($request->password);
-        $customer->phone = $request->phone;
-        $customer->admin = false;
-        $customer->cart_id = 1;
+        $user->phone = $request->phone;
+        $user->admin = false;
+        $user->cart_id;
+
+        $user->cart_id = $cart->id;
+
+        $user->save();
+
+        return redirect(route('index'))->with('success', 'Register sucessfully');
+//        return back()->with('success', 'Register sucessfully');
 
 
-        $customer->save();
-
-
-
-
-        // Set the customer's cart_id to the newly created cart's ID
-        $customer->cart_id = $cart->id;
-        $customer->save();
-
-
-
-        return back()->with('success', 'Register sucessfully');
+//        // Create a new Cart and associate it with the customer
+//        $cart = new Cart();
+//        $cart->save();
+//
+////        $user = new User();
+//        $customer = new Customer();
+//
+//        $customer->email = $request->email;
+//        $customer->password = $request->password;
+//        //$customer->password = Hash::make($request->password);
+//        $customer->phone = $request->phone;
+//        $customer->admin = false;
+//        $customer->cart_id;
+//
+//        $customer->cart_id = $cart->id;
+//        $customer->save();
+//
+//        return back()->with('success', 'Register sucessfully');
     }
 
 

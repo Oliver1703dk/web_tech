@@ -4,7 +4,6 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,29 +24,24 @@ Route::get('/test', function () {
     return view('test');
 })->name('TEST');
 
-Route::get('/UserReg', function () {
-    return view('UserReg');
-})->name('UserReg');
+Route::get('/userReg', function () {
+    return view('userReg');
+})->name('userReg');
 
 Route::get('/CheckoutPage', function () {
     return view('CheckoutPage');
 })->name('CheckoutPage');
-
-Route::get('/Products', function (){
-    return view('Products');
-})->name('Products');
 
 //Route::get('/register', function () {
 //    return view('register');
 //})->name('register');
 
 
-Route::get('/UserReg' , [RegistrationController::class, 'UserReg'])->name('UserReg');
-Route::post('/UserReg', [RegistrationController::class, 'UserRegPost'])->name('UserReg');
+Route::get('/userReg' , [RegistrationController::class, 'userReg'])->name('userReg');
+Route::post('/userReg', [RegistrationController::class, 'userRegPost'])->name('userRegPost');
 
-Route::get("/Login", [AuthenticationController::class, 'Login'])->name('Login');
-Route::post('/Login', [AuthenticationController::class, 'LoginPost'])->name('Login');
+Route::get("/login", [AuthenticationController::class, 'login'])->name('login');
+Route::post('/login', [AuthenticationController::class, 'loginPost'])->name('loginPost');
+Route::post('/logout', [AuthenticationController::class, 'logoutPost'])->name('logoutPost');
 
-//Route to products.
-Route::get('/Products',[ProductController::class, 'Products'])->name('Products');
-Route::post('/Products',[ProductController::class, 'ProductsPost'])->name('Products');
+

@@ -12,6 +12,7 @@ class Product extends Model
     private $id;
     private $name;
     private $price;
+    private $description;
 
 
     public function carts()
