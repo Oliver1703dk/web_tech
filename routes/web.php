@@ -28,13 +28,13 @@ Route::get('/userReg', function () {
     return view('userReg');
 })->name('userReg');
 
-Route::get('/CheckoutPage', function () {
-    return view('CheckoutPage');
-})->name('CheckoutPage');
+Route::get('/checkoutPage', function () {
+    return view('checkoutPage');
+})->name('checkoutPage');
 
-Route::get('/PaymentComplete', function () {
+Route::get('/paymentComplete', function () {
     return view('PaymentComplete');
-})->name('PaymentComplete');
+})->name('paymentComplete');
 
 
 

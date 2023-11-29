@@ -12,12 +12,12 @@ class PaymentController
     }
     public function CheckoutPagePost(Request $request)
     {
-        $validator = $request->validate([
+        $request->validate([
             'email' => 'required|email|unique:users',
             'password' => 'required|min:1',
             'phone' => 'required|numeric',
         ]);
-        
+
         return redirect(route('PaymentComplete'))->with('success', 'Payment success');
     }
     public function checkout(\App\Models\PaymentGateway $paymentGateway) {
