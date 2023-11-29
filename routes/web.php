@@ -32,6 +32,12 @@ Route::get('/CheckoutPage', function () {
     return view('CheckoutPage');
 })->name('CheckoutPage');
 
+Route::get('/PaymentComplete', function () {
+    return view('PaymentComplete');
+})->name('PaymentComplete');
+
+
+
 //Route::get('/register', function () {
 //    return view('register');
 //})->name('register');
@@ -43,5 +49,8 @@ Route::post('/userReg', [RegistrationController::class, 'userRegPost'])->name('u
 Route::get("/login", [AuthenticationController::class, 'login'])->name('login');
 Route::post('/login', [AuthenticationController::class, 'loginPost'])->name('loginPost');
 Route::post('/logout', [AuthenticationController::class, 'logoutPost'])->name('logoutPost');
+
+Route::get('/CheckoutPage' , [PaymentController::class, 'CheckoutPage'])->name('userReg');
+Route::post('/CheckoutPagePost', [PaymentController::class, 'CheckoutPagePost'])->name('CheckoutPagePost');
 
 
