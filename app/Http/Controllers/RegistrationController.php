@@ -19,10 +19,13 @@ class RegistrationController extends Controller
     {
 
         // Validate the request data
-        $validator = $request->validate([
+        $request->validate([
             'email' => 'required|email|unique:users',
             'password' => 'required|min:1',
+            'rpassword' => 'required|same:password',
             'phone' => 'required|numeric',
+        ], [
+            'rpassword.same' => 'The password and confirmation password do not match.',
         ]);
 
 //        // If validation fails, redirect back with errors
@@ -76,24 +79,6 @@ class RegistrationController extends Controller
 //        return back()->with('success', 'Register sucessfully');
 
 
-//        // Create a new Cart and associate it with the customer
-//        $cart = new Cart();
-//        $cart->save();
-//
-////        $user = new User();
-//        $customer = new Customer();
-//
-//        $customer->email = $request->email;
-//        $customer->password = $request->password;
-//        //$customer->password = Hash::make($request->password);
-//        $customer->phone = $request->phone;
-//        $customer->admin = false;
-//        $customer->cart_id;
-//
-//        $customer->cart_id = $cart->id;
-//        $customer->save();
-//
-//        return back()->with('success', 'Register sucessfully');
     }
 
 
