@@ -69,7 +69,6 @@
             <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-2/5">Stock status</p>
         </div>
     </div>
-
 </div>
 
 <footer class="bg-[#141414] text-white p-4">
