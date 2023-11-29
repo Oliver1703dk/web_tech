@@ -43,14 +43,4 @@ class CartController extends Controller {
         //var_dump($items);
 
     }
-
-
-    public function checkout(\App\Models\PaymentGateway $paymentGateway) {
-        // Implementation for the checkout process
-    }
-
-
-
-
-
 }
