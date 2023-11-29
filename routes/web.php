@@ -32,6 +32,10 @@ Route::get('/CheckoutPage', function () {
     return view('CheckoutPage');
 })->name('CheckoutPage');
 
+Route::get('/ProductPage', function () {
+    return view('ProductPage');
+})->name('ProductPage');
+
 //Route::get('/register', function () {
 //    return view('register');
 //})->name('register');

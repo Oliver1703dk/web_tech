@@ -56,42 +56,14 @@
     <div class="bg-[#141414]">
         <section class="container mx-auto p-4">
             <div class="grid grid-cols-7 gap-4">
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product1.jpg" alt="Product 1">
-                    <h2 class="text-lg font-semibold">Product 1</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product2.jpg" alt="Product 2">
-                    <h2 class="text-lg font-semibold">Product 2</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
                 <!-- Add more product cards here -->
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product1.jpg" alt="Product 1">
-                    <h2 class="text-lg font-semibold">Product 1</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product2.jpg" alt="Product 2">
-                    <h2 class="text-lg font-semibold">Product 2</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product1.jpg" alt="Product 1">
-                    <h2 class="text-lg font-semibold">Product 1</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product2.jpg" alt="Product 2">
-                    <h2 class="text-lg font-semibold">Product 2</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
-                <article class="bg-white shadow-md p-4">
-                    <img src="../Pictures/product1.jpg" alt="Product 1">
-                    <h2 class="text-lg font-semibold">Product 1</h2>
-                    <button class="bg-blue-500 text-white py-2 px-4 rounded">Add to Cart</button>
-                </article>
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
             </div>
         </section>
     </div>
