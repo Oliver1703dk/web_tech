@@ -18,7 +18,7 @@
     @endif
     <div class="w-96 h-full left-[500px] top-[80px] absolute">
         <div class="w-[30rem] h-[43 rem] left-0 top-0 absolute bg-blue-300 rounded-2xl shadow">
-            <form method="POST" action={{route('Login')}}>
+            <form method="POST" action={{route('loginPost')}}>
                 @csrf
 
                 <!-- Here start the component -->
@@ -57,15 +57,20 @@
                 </div>
                 <!-- Here start the component -->
                 <div class="relative mb-6 mt-12  ml-12 justify-center">
-                    <button type="submit"
-                            class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">
-                        Login
+
+                    <button type="submit" class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">
+                        login
                     </button>
+
+{{--                    <a href="/"--}}
+{{--                       class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-4xl font-KronaOne px-32 py-2.5 h-14">--}}
+{{--                        Login--}}
+{{--                    </a>--}}
                 </div>
                 <!-- Here Ends the component -->
             </form>
             <div class="relative mb-6 mt-12  ml-12 justify-center">
-                <a href="UserReg"
+                <a href="{{route("userReg")}}"
                    class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-4xl font-KronaOne px-32 py-2.5 h-14">
                     Sign Up
                 </a>

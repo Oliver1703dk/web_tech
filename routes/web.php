@@ -24,13 +24,19 @@ Route::get('/test', function () {
     return view('test');
 })->name('TEST');
 
-Route::get('/UserReg', function () {
-    return view('UserReg');
-})->name('UserReg');
+Route::get('/userReg', function () {
+    return view('userReg');
+})->name('userReg');
 
-Route::get('/CheckoutPage', function () {
-    return view('CheckoutPage');
-})->name('CheckoutPage');
+Route::get('/checkoutPage', function () {
+    return view('checkoutPage');
+})->name('checkoutPage');
+
+Route::get('/paymentComplete', function () {
+    return view('PaymentComplete');
+})->name('paymentComplete');
+
+
 
 Route::get('/ProductPage', function () {
     return view('ProductPage');
@@ -41,8 +47,14 @@ Route::get('/ProductPage', function () {
 //})->name('register');
 
 
-Route::get('/UserReg' , [RegistrationController::class, 'UserReg'])->name('UserReg');
-Route::post('/UserReg', [RegistrationController::class, 'UserRegPost'])->name('UserReg');
+Route::get('/userReg' , [RegistrationController::class, 'userReg'])->name('userReg');
+Route::post('/userReg', [RegistrationController::class, 'userRegPost'])->name('userRegPost');
 
-Route::get("/Login", [AuthenticationController::class, 'Login'])->name('Login');
-Route::post('/Login', [AuthenticationController::class, 'LoginPost'])->name('Login');
+Route::get("/login", [AuthenticationController::class, 'login'])->name('login');
+Route::post('/login', [AuthenticationController::class, 'loginPost'])->name('loginPost');
+Route::post('/logout', [AuthenticationController::class, 'logoutPost'])->name('logoutPost');
+
+Route::get('/CheckoutPage' , [PaymentController::class, 'CheckoutPage'])->name('userReg');
+Route::post('/CheckoutPagePost', [PaymentController::class, 'CheckoutPagePost'])->name('CheckoutPagePost');
+
+
