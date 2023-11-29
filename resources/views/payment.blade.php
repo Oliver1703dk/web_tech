@@ -70,6 +70,9 @@
             <div class="grid grid-cols-1 gap-4 p-5">
                 <input type="text" name="phone" class="border rounded h-10 w-full focus:outline-none p-5" placeholder="Phone Number*">
             </div>
+            <button class="mt-4 w-full bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 transition-colors duration-200">
+                Check Out
+                </button>
         </div>
 
 
