@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Request;
+use \Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
@@ -19,7 +19,6 @@ class PaymentController extends Controller
             'firstName' => 'required|min:1',
             'lastName' => 'required|min:1',
             'address' => 'required|min:1',
-            'apartment' => 'min:1',
             'zipcode' => 'required|numeric',
             'city' => 'required|min:1',
             'phone' => 'required|numeric',

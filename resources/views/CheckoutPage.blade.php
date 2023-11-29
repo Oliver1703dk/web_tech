@@ -47,10 +47,11 @@
     </nav>
 </header>
 
-
+<form method="POST" action={{route('checkoutPagePost')}}>
+    @csrf
 <div class="flex flex-wrap mx-auto max-w-screen-xl p-5">
 
-    <form method="POST" action={{route('userRegPost')}}>
+
     <div class="w-full lg:w-1/2 p-5">
         <span>Customer Information</span>
 
@@ -71,11 +72,11 @@
         <div class="grid grid-cols-1 gap-4 p-5">
             <input type="text" name="phone" class="border rounded h-10 w-full focus:outline-none p-5" placeholder="Phone Number*">
         </div>
-        <button class="mt-4 w-full bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 transition-colors duration-200">
+        <button type="submit" class="mt-4 w-full bg-yellow-500 text-white p-2 rounded hover:bg-yellow-600 transition-colors duration-200">
             Check Out
         </button>
     </div>
-    </form>
+
 
 
     <div class="w-full lg:w-1/2 p-5">
@@ -110,6 +111,7 @@
         </div>
     </div>
 </div>
+</form>
 
 
 
