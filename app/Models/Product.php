@@ -20,6 +20,11 @@ class Product extends Model
     private $name;
     private $price;
     private $description;
+    private $quantity;
+    private $product_info1;
+    private $product_info2;
+    private $product_info3;
+    private $product_info4;
 
 
     public function carts()
