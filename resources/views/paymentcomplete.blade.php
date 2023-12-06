@@ -15,16 +15,18 @@
     </nav>
 </header>
 
-<div class="flex items-center lg:order-2">
-<p class ="no-underline" > Payment Succes </p>
-</div>
+<div class=" p-8 rounded-md text-center">
+    <div>
+<p class =" mt-4" > Payment Succes </p>
+    </div>
 
 <div>
-    <img src="Images/verifylogo.png">
+    <img src="Images/verifylogo.png" class="mx-auto mb-4">
 </div>
 
 <div>
     <p class ="no-underline"> Thank you for shopping at All your need pc</p>
+</div>
 </div>
 
 
