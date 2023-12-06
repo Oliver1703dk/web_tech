@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 
@@ -33,7 +34,7 @@ Route::get('/checkoutPage', function () {
 })->name('checkoutPage');
 
 Route::get('/paymentComplete', function () {
-    return view('PaymentComplete');
+    return view('paymentcomplete');
 })->name('paymentComplete');
 
 
@@ -54,7 +55,8 @@ Route::get("/login", [AuthenticationController::class, 'login'])->name('login');
 Route::post('/login', [AuthenticationController::class, 'loginPost'])->name('loginPost');
 Route::post('/logout', [AuthenticationController::class, 'logoutPost'])->name('logoutPost');
 
-Route::get('/CheckoutPage' , [PaymentController::class, 'CheckoutPage'])->name('userReg');
-Route::post('/CheckoutPagePost', [PaymentController::class, 'CheckoutPagePost'])->name('CheckoutPagePost');
+Route::get('/checkoutPage' , [PaymentController::class, 'checkoutPage'])->name('checkoutPage');
+Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])->name('checkoutPagePost');
+
 
 

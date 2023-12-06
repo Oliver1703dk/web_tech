@@ -2,23 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Request;
+use \Illuminate\Http\Request;
 
-class PaymentController
+class PaymentController extends Controller
 {
-    public function CheckoutPage ()
+    public function checkoutPage ()
     {
         return view('CheckoutPage');
     }
-    public function CheckoutPagePost(Request $request)
+    public function checkoutPagePost(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:1',
+//            'email' => 'required|email|unique:users',
+//            'password' => 'required|min:1',
+//            'phone' => 'required|numeric',
+            'firstName' => 'required|min:1',
+            'lastName' => 'required|min:1',
+            'address' => 'required|min:1',
+            'zipcode' => 'required|numeric',
+            'city' => 'required|min:1',
             'phone' => 'required|numeric',
         ]);
 
-        return redirect(route('PaymentComplete'))->with('success', 'Payment success');
+        return redirect(route('paymentComplete'))->with('success', 'Payment success');
     }
     public function checkout(\App\Models\PaymentGateway $paymentGateway) {
         // Implementation for the checkout process
