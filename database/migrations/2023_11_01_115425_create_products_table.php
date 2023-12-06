@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('product_info2');
             $table->string('product_info3');
             $table->string('product_info4');
+            $table ->string('image');
             // Add other product fields here
             $table->timestamps();
 //            $table->unsignedBigInteger('category_id')->unique();
