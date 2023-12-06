@@ -5,7 +5,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="flex flex-col h-screen">
 <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -53,23 +53,6 @@
         </div>
     </nav>
 </header>
-
-<div>
-    <div class="h-[91px] bg-amber-500"></div>
-
-    <div class="grid grid-cols-2 gap-4">
-        <div>
-            <img class="h-[460px]" src="https://via.placeholder.com/1440x460" alt="Error"/>
-        </div>
-        <div>
-            <p class="text-xl font-bold">Product title</p>
-            <br>
-            <p class="text-xl font-bold">Price</p>
-            <br>
-            <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-2/5">Stock status</p>
-        </div>
-    </div>
-</div>
 
 <footer class="bg-[#141414] text-white p-4">
     <p>&copy; 2023 Computer Store</p>
