@@ -13,7 +13,12 @@ class Product extends Model
         "id",
         "name",
         "price",
-        "description"
+        "description",
+        "quantity",
+        "product_info1",
+        "product_info2",
+        "product_info3",
+        "product_info4",
     ];
 
     private $id;
