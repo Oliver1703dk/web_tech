@@ -19,6 +19,7 @@ class Product extends Model
         "product_info2",
         "product_info3",
         "product_info4",
+        "image",
     ];
 
     private $id;
@@ -30,6 +31,7 @@ class Product extends Model
     private $product_info2;
     private $product_info3;
     private $product_info4;
+    private $image;
 
 
     public function carts()
