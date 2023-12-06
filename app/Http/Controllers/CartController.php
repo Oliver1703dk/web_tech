@@ -10,7 +10,7 @@ use App\Services\PaymentGateway; // Import the PaymentGateway service if used
 class CartController extends Controller {
     public function addItem(Product $product, $quantity = 1) {
         if (isset($this->items[$product->id])) {
-            $this->items[$product->id]['quantity'] += $quantity+1;
+            $this->items[$product->id]['quantity'] += $quantity;
         }
         else {
             $this->items[$product->id] = [
@@ -18,6 +18,7 @@ class CartController extends Controller {
                 'quantity' => $quantity
             ];
         }
+
         //THE METHOD CAN BE USED LIKE THIS
         // Assuming you have an instance of the Cart class
         //$cart = new Cart();

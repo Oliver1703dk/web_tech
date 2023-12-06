@@ -7,22 +7,93 @@ use App\Models\Product;
 
 class ProductSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
         // Seed sample products
         Product::create([
-            'name' => 'Product 1',
-            'description' => 'description 1',
-            'price' => 19.99,
-            'category_id' => 1, // Replace with the actual category ID
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
             // Add other product-related fields as needed
         ]);
 
         Product::create([
-            'name' => 'Product 2',
+            'name' => 'Mega chunk 2',
             'description' => 'description 2',
+            'quantity' => 1,
             'price' => 29.99,
-            'category_id' => 2, // Replace with the actual category ID
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
+            // Add other product-related fields as needed
+        ]);
+
+        Product::create([
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
+            // Add other product-related fields as needed
+        ]);
+        Product::create([
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
+            // Add other product-related fields as needed
+        ]);
+        Product::create([
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
+            // Add other product-related fields as needed
+        ]);
+        Product::create([
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
+            // Add other product-related fields as needed
+        ]);
+        Product::create([
+            'name' => 'Mega chunk 2',
+            'description' => 'description 2',
+            'quantity' => 1,
+            'price' => 29.99,
+            'product_info1' => 'Intel i9 13000k',
+            'product_info2' => 'info',
+            'product_info3' => 'info',
+            'product_info4' => 'info',
+//            'category_id' => 2, // Replace with the actual category ID
             // Add other product-related fields as needed
         ]);
 

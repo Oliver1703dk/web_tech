@@ -54,4 +54,4 @@ Route::get('/checkoutPage' , [PaymentController::class, 'checkoutPage'])->name('
 Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])->name('checkoutPagePost');
 
 
-Route::get('/ProductPage' , [ProductController::class, 'productPage'])->name('ProductPage');
+Route::get('/productPage' , [ProductController::class, 'productPage'])->name('productPage');

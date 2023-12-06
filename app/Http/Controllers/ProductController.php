@@ -14,8 +14,15 @@ class ProductController extends Controller
           new Product(["id"=>1, "name"=>"Iphone 17 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
         ];
 
-        return view('ProductPage')->with(["products"=>$products]);
+        return view('productPage')->with(["products"=>$products]);
     }
+
+
+
+
+
+
+
 }
 
 

@@ -1,6 +1,6 @@
 @extends("app")
 
-@section("title", "ProductPage")
+@section("title", "productPage")
 
 @section("content")
     <div class="flex-1">
