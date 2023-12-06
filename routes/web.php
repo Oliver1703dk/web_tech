@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
@@ -37,12 +38,6 @@ Route::get('/paymentComplete', function () {
     return view('paymentcomplete');
 })->name('paymentComplete');
 
-
-
-Route::get('/ProductPage', function () {
-    return view('ProductPage');
-})->name('ProductPage');
-
 //Route::get('/register', function () {
 //    return view('register');
 //})->name('register');
@@ -59,4 +54,4 @@ Route::get('/checkoutPage' , [PaymentController::class, 'checkoutPage'])->name('
 Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])->name('checkoutPagePost');
 
 
-
+Route::get('/ProductPage' , [ProductController::class, 'productPage'])->name('ProductPage');

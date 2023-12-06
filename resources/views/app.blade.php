@@ -8,7 +8,7 @@
 
     <!-- Include your CSS and other head elements here -->
 </head>
-<body>
+<body >
 <header>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -57,8 +57,9 @@
     @yield('content') <!-- This is where the content from individual views will be injected -->
 </main>
 
-<footer>
-    <!-- Your website footer content, copyright, etc. -->
+<footer class="bg-[#141414] text-white p-4 fixed bottom-0 left-0 w-full">
+    <p>&copy; 2023 Computer Store</p>
 </footer>
+
 </body>
 </html>

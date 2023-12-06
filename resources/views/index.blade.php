@@ -69,14 +69,14 @@
     <div class="bg-[#141414]">
         <section class="container mx-auto p-4">
             <div class="grid grid-cols-7 gap-4">
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
                 <!-- Add more product cards here -->
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "iphone" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
+                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
             </div>
         </section>
     </div>
