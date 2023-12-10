@@ -25,16 +25,16 @@ class Product extends Model
     // Explicitly specify the primary key
     protected $primaryKey = 'id';
 
-    private $id;
-    private $name;
-    private $price;
-    private $description;
-    private $quantity;
-    private $product_info1;
-    private $product_info2;
-    private $product_info3;
-    private $product_info4;
-    private $image;
+//    private $id;
+//    private $name;
+//    private $price;
+//    private $description;
+//    private $quantity;
+//    private $product_info1;
+//    private $product_info2;
+//    private $product_info3;
+//    private $product_info4;
+//    private $image;
 
 
 

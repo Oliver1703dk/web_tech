@@ -26,9 +26,10 @@ class Cart extends Model
 
 
 
-    public function addItem(Product $product, $quantity)
+    public function addItem($productId, $quantity)
     {
-        $existingProduct = $this->products()->where('product_id', $product->id)->first();
+        $existingProduct = $this->products()->where('product_id', $productId)->first();
+//        dd($existingProduct);
 
         if ($existingProduct) {
             // If the product already exists in the cart, update the quantity
@@ -36,7 +37,10 @@ class Cart extends Model
             $existingProduct->pivot->save();
         } else {
             // If the product is not in the cart, attach it with the given quantity
-            $this->products()->attach($product, ['quantity' => $quantity]);
+            // TODO: Id is changed
+
+
+            $this->products()->attach($productId, ['quantity' => $quantity]);
         }
     }
 

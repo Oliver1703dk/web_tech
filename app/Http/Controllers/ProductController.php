@@ -24,6 +24,8 @@ class ProductController extends Controller
         $products = Product::all();
 
 //        dd("Index method called");
+//        dd($products);
+
 
 
         // Pass the products to the view
