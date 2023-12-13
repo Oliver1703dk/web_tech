@@ -9,6 +9,11 @@ use App\Models\CartProduct;
 
 
 class CartController extends Controller {
+
+    public function cart()
+    {
+        return view('cart');
+    }
 //    public function addItem(Product $product, $quantity = 1) {
 //
 //        //TODO: When not logged in, it goes to the login page.
@@ -167,16 +172,22 @@ class CartController extends Controller {
 
     public function index()
     {
-        // Fetch products from the database
-        $products = Product::all();
 
-//        dd("Index method called");
-//        dd($products);
+        // Ensure that a user is authenticated
+        if (!auth()->check()) {
+            // Handle the unauthenticated user, e.g., redirect to login page
+            return redirect()->route('login');
+        }
 
+        // Get the current authenticated user
+        $user = auth()->user();
 
+        // Fetch the cart for the authenticated user using the user's cart_id
+        $cart = Cart::find($user->cart_id);
+
+        $cartItems = $cart->items;
 
         // Pass the products to the view
-        return view('index', compact('products'));
+        return view('cart', compact('cartItems'));
     }
-
 }

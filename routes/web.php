@@ -65,3 +65,13 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
+//Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+Route::get('/cart', [CartController::class, 'index'])->name('cartPage');
+
+
+Route::get('/cart', [CartController::class, 'index'])->name('profile');
+
+
+
+
