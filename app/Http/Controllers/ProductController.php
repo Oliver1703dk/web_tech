@@ -7,13 +7,14 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function productPage($id)
+    public function productPage(Request $request)
     {
+        $productId = $request->input('product_id');
 //        $products = [
 //          new Product(["id"=>0, "name"=>"Iphone 14 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
 //          new Product(["id"=>1, "name"=>"Iphone 17 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
 //        ];
-        $product = Product::find($id);
+        $product = Product::find($productId);
 
         // Check if product exists
         if (!$product) {

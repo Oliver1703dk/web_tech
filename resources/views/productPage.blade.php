@@ -34,10 +34,17 @@
                 </div>
 
                 <div class="h-24 border-t-2 border-b-2 border-amber-500 mb-4 w-full flex items-center justify-center">
-                    <button
-                        class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10">
-                        Add To Cart
-                    </button>
+                    <form method="POST" action={{ route('addItem') }}>
+                        {{--    <form method="POST" action={{ route('addItem', ['product' => $Product->id]) }}>--}}
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <input type="hidden" name="quantity" value="1">
+                        <button
+                            class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10">
+                            Add To Cart
+                        </button>
+                    </form>
+
                     <button
                         class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10 ml-4">
                         Buy Now
