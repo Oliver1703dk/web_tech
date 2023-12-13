@@ -6,25 +6,25 @@
     <div class="flex-1">
         <div class="h-[91px] bg-amber-500"></div>
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-4 h-fit">
             <div>
-                <img class="h-[374px]" src="{{ $product-> image}}" alt="Error"/>
+                <img class="h-[374px] mx-auto my-auto" src="{{ $product->image }}" alt="Error"/>
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
             <div>
-                <p class="text-xl font-bold">{{ $product->name }}</p>
+                <p class="text-xl font-bold">Name: {{ $product->name }}</p>
                 <br>
-                <p class="text-xl font-bold">{{ $product->price }}</p>
+                <p class="text-xl font-bold">Price: {{ $product->price }} kr.</p>
                 <br>
-                <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-full">{{ $product->quantity }}</p>
+                <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-full">Qty: {{ $product->quantity }}</p>
 
                 <div class="grid grid-cols-2">
-{{--                    <div>--}}
-{{--                        <p class="text-xl font-bold">Storage:</p>--}}
-{{--                        <p class="text-xl font-bold">Product_info_2:</p>--}}
-{{--                        <p class="text-xl font-bold">Product_info_3:</p>--}}
-{{--                        <p class="text-xl font-bold">Product_info_4:</p>--}}
-{{--                    </div>--}}
+                    <div>
+                        <p class="text-xl font-bold">Storage:</p>
+                        <p class="text-xl font-bold">CPU:</p>
+                        <p class="text-xl font-bold">RAM:</p>
+                        <p class="text-xl font-bold">SSD:</p>
+                    </div>
                     <div>
                         <p class="text-xl font-bold">{{ $product-> product_info1}}</p>
                         <p class="text-xl font-bold">{{ $product-> product_info2}}</p>
@@ -54,21 +54,9 @@
         </div>
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <div class="grid grid-cols-5 border-b-2 border-amber-500 mb-4 w-full">
+                <div class="grid grid-cols-1 border-b-2 border-amber-500 mb-4 w-full">
                     <div class="hover:bg-amber-500 transition duration-300 ease-in-out cursor-pointer p-2 text-center">
-                        Features
-                    </div>
-                    <div class="hover:bg-amber-500 transition duration-300 ease-in-out cursor-pointer p-2 text-center">
-                        Specification
-                    </div>
-                    <div class="hover:bg-amber-500 transition duration-300 ease-in-out cursor-pointer p-2 text-center">
-                        Warranty
-                    </div>
-                    <div class="hover:bg-amber-500 transition duration-300 ease-in-out cursor-pointer p-2 text-center">
-                        Review
-                    </div>
-                    <div class="hover:bg-amber-500 transition duration-300 ease-in-out cursor-pointer p-2 text-center">
-                        Delivery
+                        Description
                     </div>
                 </div>
                 <div>
@@ -86,9 +74,8 @@
                 <div>
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Sørger for der kun kan komme 2 productBox på den her side-->
-{{--                        @foreach($products as $product)--}}
-{{--                            @include("productBox", ["ImageName" => $product->name.".jpg", "ProductName" => $product->name])--}}
-{{--                        @endforeach--}}
+                        @include("productBox")
+                        @include("productBox")
                     </div>
                 </div>
             </div>
