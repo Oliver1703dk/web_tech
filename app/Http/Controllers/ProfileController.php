@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 class ProfileController extends Controller
 {
     public function showProfile()
@@ -20,19 +21,12 @@ class ProfileController extends Controller
 
     public function changePassword(Request $request)
     {
-        $user = auth()->user();
+        $user = Auth::user();
+        $newPassword = $request->input('new_password');
 
-        $validatedData = $request->validate([
-            'oldPassword' => 'required|min:8|max:255',
-            'newPassword' => 'required|min:8|max:255|confirmed',
-        ]);
+        $user->password = Hash::make($newPassword);
+        $user->save();
 
-        if (!$user->checkPassword($validatedData['oldPassword'])) {
-            return redirect()->back()->withErrors(['oldPassword' => 'Invalid password.']);
-        }
-
-        $user->update(['password' => bcrypt($validatedData['newPassword'])]);
-
-        return redirect()->route('profile');
+        return redirect('/')->with('success', 'Password changed successfully. Please log in again.');
     }
 }

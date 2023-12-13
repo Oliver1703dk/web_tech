@@ -70,7 +70,10 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 
-//Route::get('/profile', [CartController::class, 'index'])->name('profile');
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'showProfile'])->name('profile');
+
+Route::post('/profile/change-password', [App\Http\Controllers\ProfileController::class, 'changePassword'])->name('profile.changePassword');
+
 
 
 

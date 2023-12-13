@@ -19,16 +19,16 @@
     @error('oldPassword')
     <p class="error">{{ $message }}</p>
     @enderror
-
+<br>
     <label for="newPassword">New Password:</label>
     <input type="password" id="newPassword" name="newPassword" required>
     @error('newPassword')
     <p class="error">{{ $message }}</p>
     @enderror
-
+    <br>
     <label for="newPasswordConfirmation">Confirm Password:</label>
     <input type="password" id="newPasswordConfirmation" name="newPasswordConfirmation" required>
-
+    <br>
     <button type="submit">Change Password</button>
 </form>
 </body>
