@@ -10,25 +10,38 @@ class Cart extends Model
     use HasFactory;
 
     private $id;
-    private $customerId;
     private $items = [];
 
 
     public function products()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class, 'cart_product')->withPivot('quantity');
     }
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'cart_id', 'id');
     }
 
 
 
 
 
-    public function addItem(Product $product) {
-        // Implementation to add a product to the cart
+    public function addItem($productId, $quantity)
+    {
+        $existingProduct = $this->products()->where('product_id', $productId)->first();
+//        dd($existingProduct);
+
+        if ($existingProduct) {
+            // If the product already exists in the cart, update the quantity
+            $existingProduct->pivot->quantity += $quantity;
+            $existingProduct->pivot->save();
+        } else {
+            // If the product is not in the cart, attach it with the given quantity
+            // TODO: Id is changed
+
+
+            $this->products()->attach($productId, ['quantity' => $quantity]);
+        }
     }
 
     public function getItems() {

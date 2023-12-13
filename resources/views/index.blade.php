@@ -1,66 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Computer Store</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+@extends("app")
 
-<body>
-<header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <a href="http://127.0.0.1:8000" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/>
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">AllYouNeedPC</span>
-            </a>
+@section("title", "index")
 
-
-            <form>
-                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>
-                    </div>
-                    <input type="search" id="default-search" class="block w-[40rem] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
-                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-                </div>
-            </form>
-
-
-
-
-            <div class="flex items-center lg:order-2">
-                <a href="profile"
-                   class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-                    Profile
-                </a>
-                <a href="#"
-                   class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-                    Cart
-                </a>
-                @guest()
-                <a href="login"
-                   class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-                    Log in
-                </a>
-                @endguest
-                @auth()
-                    <form method="POST" action={{route('logoutPost')}}>
-                        @csrf
-                        <label>
-                            <button type = "submit" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
-                                Sign out
-                            </button>
-                        </label>
-
-                    </form>
-                @endauth
-            </div>
-        </div>
-    </nav>
-</header>
+@section("content")
 
 <div>
     <div class="h-[91px] bg-amber-500"></div>
@@ -69,21 +11,34 @@
     <div class="bg-[#141414]">
         <section class="container mx-auto p-4">
             <div class="grid grid-cols-7 gap-4">
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
-                <!-- Add more product cards here -->
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])
-                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])
+                @foreach ($products as $product)
+                    @include("productBox1", [
+                        "Product" => $product
+                    ])
+                @endforeach
+{{--                @include("productBox1", [--}}
+{{--                    "Product" => new App\Models\Product([--}}
+{{--                        "image"=>"https://t4.ftcdn.net/jpg/02/10/45/53/360_F_210455326_jjx8s4AaXsgTnSN423K0pzFM7VDOFGop.jpg",--}}
+{{--                        "id" => 1,--}}
+{{--                        "name" => "Sample Product",--}}
+{{--                        "price" => 19.99,--}}
+{{--                        "description" => "This is a sample product description.",--}}
+{{--                        "quantity" => 10,--}}
+{{--                        "product_info1" => "Info 1",--}}
+{{--                        "product_info2" => "Info 2",--}}
+{{--                        "product_info3" => "Info 3",--}}
+{{--                        "product_info4" => "Info 4",--}}
+{{--                    ])--}}
+{{--                ])--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])--}}
+{{--                <!-- Add more product cards here -->--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product2" ])--}}
+{{--                @include("productBox", ["ImageName" => "product1.jpg", "ProductName" => "Product1" ])--}}
             </div>
         </section>
     </div>
 </div>
-
-<footer class="bg-[#141414] text-white p-4">
-    <p>&copy; 2023 Computer Store</p>
-</footer>
-</body>
-</html>
+@endsection

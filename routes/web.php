@@ -4,9 +4,10 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\CartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,9 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');;
+//Route::get('/', function () {
+//    return view('index');
+//})->name('index');;
 
 Route::get('/test', function () {
     return view('test');
@@ -55,8 +56,22 @@ Route::get('/checkoutPage' , [PaymentController::class, 'checkoutPage'])->name('
 Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])->name('checkoutPagePost');
 
 
-Route::get('/ProductPage' , [ProductController::class, 'productPage'])->name('ProductPage');
+Route::get('/productPage' , [ProductController::class, 'productPage'])->name('productPage');
 
 
-Route::get('/profile', [ProfileController::class, 'showProfile']);
-Route::post('/profile/changePassword', [ProfileController::class, 'changePassword']);
+Route::post('/addItem', [CartController::class, 'addItem'])->name('addItem');
+
+Route::get('/', [ProductController::class, 'index'])->name('index');
+
+//Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+//Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
+
+
+//Route::get('/profile', [CartController::class, 'index'])->name('profile');
+
+
+
+

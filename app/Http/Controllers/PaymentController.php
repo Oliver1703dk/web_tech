@@ -26,6 +26,9 @@ class PaymentController extends Controller
 
         return redirect(route('paymentComplete'))->with('success', 'Payment success');
     }
+
+
+
     public function checkout(\App\Models\PaymentGateway $paymentGateway) {
         // Implementation for the checkout process
     }
