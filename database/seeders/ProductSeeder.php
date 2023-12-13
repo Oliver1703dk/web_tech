@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'info',
             'product_info3' => 'info',
             'product_info4' => 'info',
-            'image'=>'image',
+            'image'=>'https://drive.google.com/file/d/1ySSFE41HD_UTouJC9CePff3mL0bI9dzB/view?usp=share_link',
 //            'category_id' => 2, // Replace with the actual category ID
             // Add other product-related fields as needed
         ]);

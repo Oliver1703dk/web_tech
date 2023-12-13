@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\CartController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,9 @@ use App\Http\Controllers\RegistrationController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');;
+//Route::get('/', function () {
+//    return view('index');
+//})->name('index');;
 
 Route::get('/test', function () {
     return view('test');
@@ -55,3 +57,9 @@ Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])
 
 
 Route::get('/productPage' , [ProductController::class, 'productPage'])->name('productPage');
+
+
+Route::post('/addItem', [CartController::class, 'addItem'])->name('addItem');
+
+Route::get('/', [ProductController::class, 'index'])->name('index');
+

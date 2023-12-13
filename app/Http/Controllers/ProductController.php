@@ -17,6 +17,22 @@ class ProductController extends Controller
         return view('productPage')->with(["products"=>$products]);
     }
 
+    // Assuming this is part of your controller method
+    public function index()
+    {
+        // Fetch products from the database
+        $products = Product::all();
+
+//        dd("Index method called");
+//        dd($products);
+
+
+
+        // Pass the products to the view
+        return view('index', compact('products'));
+    }
+
+
 
 
 
