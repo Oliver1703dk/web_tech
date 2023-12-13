@@ -1,14 +1,20 @@
 <article class="bg-white shadow-md p-4">
-    <div class="grid grid-rows-3 grid-flow-col gap-4">
-        <img src={{$Product->image}} alt={{$Product->name}}>
-        <h2 class="text-lg font-semibold">{{$Product->name}}</h2>
-        <form method="GET" action={{ route('productPage') }}>
-            @csrf
-            <input type="hidden" name="product_id" value="{{ $Product->id }}">
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Click for more info</button>
-        </form>
+    <div class="border p-4">
+        <h3 class="text-lg font-bold">{{ $item['product']->name }}</h3>
+        {{--                                <p>{{ $item['product']->description }}</p>--}}
+        <p>Price: ${{ $item['product']->price }}</p>
+        <p>Quantity: {{ $item['quantity'] }}</p>
+        <!-- Add more item details as needed -->
     </div>
 </article>
+
+@foreach ($products['product'] as $product)
+    @include("productBox1", [
+        "Product" => $product
+    ])
+@endforeach
+
+
 
 
 {{--<article class="bg-white shadow-md p-4">--}}

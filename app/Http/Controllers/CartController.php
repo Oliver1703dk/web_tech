@@ -172,22 +172,29 @@ class CartController extends Controller {
 
     public function index()
     {
-
-        // Ensure that a user is authenticated
         if (!auth()->check()) {
-            // Handle the unauthenticated user, e.g., redirect to login page
             return redirect()->route('login');
         }
 
-        // Get the current authenticated user
         $user = auth()->user();
 
-        // Fetch the cart for the authenticated user using the user's cart_id
-        $cart = Cart::find($user->cart_id);
+        // Fetch the cart for the authenticated user
+        $cart = Cart::with('products')->find($user->cart_id);
 
-        $cartItems = $cart->items;
+        if (!$cart) {
+            // Handle the case where the cart doesn't exist
+            return view('cart')->with('cartItems', []);
+        }
 
-        // Pass the products to the view
+        // Retrieve products and their quantities from the pivot table
+        $cartItems = $cart->products->map(function ($product) {
+            return [
+                'product' => $product,
+                'quantity' => $product->pivot->quantity
+            ];
+        });
+
         return view('cart', compact('cartItems'));
     }
+
 }
