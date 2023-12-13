@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 
@@ -55,3 +56,7 @@ Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])
 
 
 Route::get('/ProductPage' , [ProductController::class, 'productPage'])->name('ProductPage');
+
+
+Route::get('/profile', [ProfileController::class, 'showProfile']);
+Route::post('/profile/changePassword', [ProfileController::class, 'changePassword']);
