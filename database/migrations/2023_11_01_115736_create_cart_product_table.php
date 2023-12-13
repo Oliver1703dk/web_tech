@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('cart_id');
             $table->unsignedBigInteger('product_id');
+            $table->integer('quantity')->default(1);;
 
             // Define foreign keys to link the pivot table to the carts and products tables
             $table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
