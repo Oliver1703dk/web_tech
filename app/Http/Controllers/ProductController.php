@@ -7,14 +7,26 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function productPage()
+    public function productPage($id)
     {
-        $products = [
-          new Product(["id"=>0, "name"=>"Iphone 14 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
-          new Product(["id"=>1, "name"=>"Iphone 17 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
-        ];
+//        $products = [
+//          new Product(["id"=>0, "name"=>"Iphone 14 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
+//          new Product(["id"=>1, "name"=>"Iphone 17 pro", "price"=> 10000, "description" => "Lorum ipsum"]),
+//        ];
+        $product = Product::find($id);
 
-        return view('productPage')->with(["products"=>$products]);
+        // Check if product exists
+        if (!$product) {
+            // Handle the case where the product is not found, e.g., redirect or show an error message
+            return redirect()->back()->withErrors('Product not found.');
+        }
+
+
+
+        return view('productPage', compact('product'));
+
+
+//        return view('productPage')->with(["products"=>$products]);
     }
 
     // Assuming this is part of your controller method

@@ -12,11 +12,11 @@
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
             <div>
-                <p class="text-xl font-bold">Product title</p>
+                <p class="text-xl font-bold">{{ $product->name }}</p>
                 <br>
-                <p class="text-xl font-bold">Price</p>
+                <p class="text-xl font-bold">{{ $product->price }}</p>
                 <br>
-                <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-full">Stock status</p>
+                <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-full">{{ $product->quantity }}</p>
 
                 <div class="grid grid-cols-2">
                     <div>
@@ -84,9 +84,9 @@
                 <div>
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Sørger for der kun kan komme 2 productBox på den her side-->
-                        @foreach($products as $product)
-                            @include("productBox", ["ImageName" => $product->name.".jpg", "ProductName" => $product->name])
-                        @endforeach
+{{--                        @foreach($products as $product)--}}
+{{--                            @include("productBox", ["ImageName" => $product->name.".jpg", "ProductName" => $product->name])--}}
+{{--                        @endforeach--}}
                     </div>
                 </div>
             </div>
