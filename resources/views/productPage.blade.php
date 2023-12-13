@@ -44,11 +44,6 @@
                             Add To Cart
                         </button>
                     </form>
-
-                    <button
-                        class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10 ml-4">
-                        Buy Now
-                    </button>
                 </div>
             </div>
         </div>
