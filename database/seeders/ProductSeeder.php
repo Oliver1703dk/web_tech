@@ -19,6 +19,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i7-9700K processor',
             'product_info3' => '16GB DDR4 RAM',
             'product_info4' => '240GB SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -30,6 +31,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i5 processor',
             'product_info3' => '8GB LPDDR4x RAM',
             'product_info4' => '256GB PCIe NVMe SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -41,6 +43,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i9-9900K processor',
             'product_info3' => '32GB DDR4 RAM',
             'product_info4' => '480GB SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -52,6 +55,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i7 processor',
             'product_info3' => '16GB LPDDR4x RAM',
             'product_info4' => '512GB PCIe NVMe SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -63,6 +67,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i7-9700K processor',
             'product_info3' => '16GB DDR4 RAM',
             'product_info4' => '240GB SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -74,6 +79,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i5 processor',
             'product_info3' => '8GB LPDDR4x RAM',
             'product_info4' => '256GB PCIe NVMe SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
         Product::create([
@@ -85,6 +91,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i7 processor',
             'product_info3' => '16GB LPDDR4x RAM',
             'product_info4' => '512GB PCIe NVMe SSD',
+            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
         ]);
 
 
