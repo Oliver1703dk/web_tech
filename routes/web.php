@@ -63,14 +63,14 @@ Route::post('/addItem', [CartController::class, 'addItem'])->name('addItem');
 
 Route::get('/', [ProductController::class, 'index'])->name('index');
 
-Route::get('/cart', [CartController::class, 'index'])->name('cart');
+//Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 //Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
-Route::get('/cart', [CartController::class, 'index'])->name('cartPage');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 
-Route::get('/cart', [CartController::class, 'index'])->name('profile');
+//Route::get('/profile', [CartController::class, 'index'])->name('profile');
 
 
 
