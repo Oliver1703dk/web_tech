@@ -63,3 +63,5 @@ Route::post('/addItem', [CartController::class, 'addItem'])->name('addItem');
 
 Route::get('/', [ProductController::class, 'index'])->name('index');
 
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
+

@@ -164,4 +164,19 @@ class CartController extends Controller {
         //var_dump($items);
 
     }
+
+    public function index()
+    {
+        // Fetch products from the database
+        $products = Product::all();
+
+//        dd("Index method called");
+//        dd($products);
+
+
+
+        // Pass the products to the view
+        return view('index', compact('products'));
+    }
+
 }

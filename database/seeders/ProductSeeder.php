@@ -71,7 +71,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
-            'name' => 'ASUS ROG Strix Flare Mechanical Gaming Keyboard',
+            'name' => 'ASUS ROG Strix Flare Mechanical',
             'description' => 'Conquer the gaming battlefield with the ASUS ROG Strix Flare Mechanical Gaming Keyboard. This RGB backlit keyboard is engineered for gamers seeking the utmost precision and style. Featuring customizable Cherry MX switches, dedicated media controls, and a magnetic wrist rest for added comfort, the Strix Flare is more than a keyboard; its a weapon for victory. Elevate your gaming setup, experience responsive key action, and unleash your full gaming potential with the ASUS ROG Strix Flare.',
             'quantity' => 120,
             'price' => 169.99,
