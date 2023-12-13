@@ -8,7 +8,7 @@
 
         <div class="grid grid-cols-2 gap-4">
             <div>
-                <img class="h-[374px]" src="https://via.placeholder.com/1440x460" alt="Error"/>
+                <img class="h-[374px]" src="{{ $product-> image}}" alt="Error"/>
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
             <div>
@@ -19,17 +19,17 @@
                 <p class="text-xl font-bold border-b-2 border-amber-500 mb-4 w-full">{{ $product->quantity }}</p>
 
                 <div class="grid grid-cols-2">
+{{--                    <div>--}}
+{{--                        <p class="text-xl font-bold">Storage:</p>--}}
+{{--                        <p class="text-xl font-bold">Product_info_2:</p>--}}
+{{--                        <p class="text-xl font-bold">Product_info_3:</p>--}}
+{{--                        <p class="text-xl font-bold">Product_info_4:</p>--}}
+{{--                    </div>--}}
                     <div>
-                        <p class="text-xl font-bold">Product_info_1:</p>
-                        <p class="text-xl font-bold">Product_info_2:</p>
-                        <p class="text-xl font-bold">Product_info_3:</p>
-                        <p class="text-xl font-bold">Product_info_4:</p>
-                    </div>
-                    <div>
-                        <p class="text-xl font-bold">info_1:</p>
-                        <p class="text-xl font-bold">info_2:</p>
-                        <p class="text-xl font-bold">info_3:</p>
-                        <p class="text-xl font-bold">info_4:</p>
+                        <p class="text-xl font-bold">{{ $product-> product_info1}}</p>
+                        <p class="text-xl font-bold">{{ $product-> product_info2}}</p>
+                        <p class="text-xl font-bold">{{ $product-> product_info3}}</p>
+                        <p class="text-xl font-bold">{{ $product-> product_info4}}</p>
                     </div>
                 </div>
 
@@ -66,12 +66,7 @@
                 </div>
                 <div>
                     <p class="m-1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
+                        {{ $product-> description}}
                     </p>
                 </div>
             </div>
