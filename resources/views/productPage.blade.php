@@ -66,12 +66,10 @@
                         Great Deals of the week:
                     </p>
                 </div>
-                <div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <!-- Sørger for der kun kan komme 2 productBox på den her side-->
-                        @include("productBox")
-                        @include("productBox")
-                    </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Sørger for der kun kan komme 2 productBox på den her side-->
+                    @include("productBox")
+                    @include("productBox")
                 </div>
             </div>
         </div>
