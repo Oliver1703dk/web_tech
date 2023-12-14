@@ -8,11 +8,14 @@
 {{--    </div>--}}
 {{--</article>--}}
 
-<article class="bg-white shadow-md p-4">
+<article class="bg-white shadow-md p-4 rounded-lg flex flex-col items-center h-fit">
     <img src="https://static.thenounproject.com/png/1226185-200.png">
     <h2 class="text-lg font-semibold">{{ $Product['product']->name }}</h2>
     <p>Price: ${{ $Product['product']->price }}</p>
+    <div class="grid grid-cols-2 gap-4">
     <p>Quantity: {{ $Product['quantity'] }}</p>
+    <button class="bg-red-500 text-white rounded w-10">-</button>
+    </div>
     <button class="bg-blue-500 text-white py-2 px-4 rounded">Click for More</button>
 </article>
 

@@ -13,7 +13,7 @@
         </div>
     @endif
     <div class="w-96 h-full left-[500px] top-[80px] absolute">
-        <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-gray-950 rounded-2xl shadow"></div>
+        <div class="w-[30rem] h-[43rem] left-0 top-0 absolute bg-blue-300 rounded-2xl shadow"></div>
 
         <form method="POST" action={{route('userRegPost')}}>
             @csrf
@@ -58,9 +58,11 @@
                 </svg>
             </div>
             <input type="number" name="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Phone Number">
-            <button type="submit" class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">
-                Create Account
-            </button>
+            <div class="py-4 flex content-center">
+                <button type="submit" class="text-white bg-amber-500 font-medium rounded-3xl  hover:bg-amber-300 text-5xl font-KronaOne w-96 h-14">
+                    Create Account
+                </button>
+            </div>
         </div>
         <!-- Here Ends the component -->
 

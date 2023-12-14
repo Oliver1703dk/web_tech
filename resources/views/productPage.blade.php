@@ -69,8 +69,16 @@
                 <div>
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Sørger for der kun kan komme 2 productBox på den her side-->
-                        @include("productBox")
-                        @include("productBox")
+                        <x-productBoxComponent
+                            image="https://www.elgiganten.dk/image/dv_web_D1800010021488136/628230/macbook-air-15-m28256-2023-midnat.jpg"
+                            title="Macbook 2023"
+                            buttonText="Click for More"
+                        />
+                        <x-productBoxComponent
+                            image="https://teleboxen.dk/media/3675/imac-blaa-front.jpg?anchor=center&mode=crop&width=800&height=800&rnd=132640907580000000"
+                            title="Macbook 2023"
+                            buttonText="Click for More"
+                        />
                     </div>
                 </div>
             </div>
