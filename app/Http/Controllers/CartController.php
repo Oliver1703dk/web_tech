@@ -45,6 +45,8 @@ class CartController extends Controller {
 
     }
 
+
+
     public function addItem(Request $request)
 //    public function addItem(Product $product, $quantity = 1)
     {

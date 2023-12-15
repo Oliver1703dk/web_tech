@@ -4,6 +4,7 @@
 
 @section("content")
 
+
     <div>
         <div class="h-[91px] bg-amber-500">
             <img class="object-fill h-full w-full"
@@ -16,10 +17,15 @@
         <div class="bg-amber-500">
             <section class="container mx-auto p-4">
                 <div class="grid grid-cols-7 gap-4">
+                    @php $count = 0; @endphp
                     @foreach ($products as $product)
                         @include("components.productBoxData", [
                             "Product" => $product
                         ])
+                        @php $count++; @endphp
+                        @if ($count == 7)
+                            @break
+                        @endif
                     @endforeach
                 </div>
             </section>

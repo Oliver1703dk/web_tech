@@ -13,20 +13,44 @@ class ProfileController extends Controller
         $user = auth()->user();
         $userEmail = $user->email;
 
-        return view('profile', [
-            'user' => $user,
-            'userEmail' => $userEmail
-        ]);
+
+
+        return view('profile', compact('user'));
+
+//        return view('profile', [
+//            'user' => $user,
+//            'userEmail' => $userEmail
+//        ]);
     }
 
     public function changePassword(Request $request)
     {
         $user = Auth::user();
-        $newPassword = $request->input('new_password');
+//        $oldPassword = $request->input('passwordOld');
+//        $new1Password = $request->input('passwordNew1');
+//        $new2Password = $request->input('passwordNew2');
 
-        $user->password = Hash::make($newPassword);
+        $request->validate([
+            'passwordOld' => 'required',
+            'passwordNew1' => 'required|min:1',
+            'passwordNew2' => 'required|min:1|same:passwordNew1'
+        ]);
+
+
+        if (!Hash::check($request->passwordOld, $user->password)) {
+
+            return back()->withErrors(['passwordOld' => 'The provided password does not match our records.']);
+        }
+
+        if ($request->passwordNew1 !== $request->passwordNew2) {
+
+            return back()->withErrors(['passwordNew1' => 'The new passwords do not match.']);
+        }
+
+        $user->password = Hash::make($request->passwordNew1);
         $user->save();
 
-        return redirect('/')->with('success', 'Password changed successfully. Please log in again.');
+
+        return redirect(route('index'))->with('success', 'Password changed successfully');
     }
 }

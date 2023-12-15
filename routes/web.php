@@ -7,6 +7,8 @@ use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProfileController;
+
 
 
 /*
@@ -70,12 +72,18 @@ Route::get('/', [ProductController::class, 'index'])->name('index');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 
-Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'showProfile'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
 
-Route::post('/profile/change-password', [App\Http\Controllers\ProfileController::class, 'changePassword'])->name('profile.changePassword');
+Route::post('/', [ProfileController::class, 'changePassword'])->name('changePassword');
 
 
 Route::post('/cartMinus', [CartController::class, 'minusQuantity'])->name('minusQuantity');
+
+
+Route::get('/productPageAdmin', [productController::class, 'productPageAdmin'])->name('productPageAdmin');
+
+Route::post('/addProductDB', [ProductController::class, 'addProductDB'])->name('addProductDB');
+
 
 
 
