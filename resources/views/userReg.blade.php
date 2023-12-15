@@ -2,7 +2,7 @@
 
 <html lang ="en">
 <head>
-    <title>Insert name here</title>
+    <title>Register user</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[url(https://ibb.co/n67NGzH)] bg-cover min-h-screen">

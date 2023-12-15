@@ -40,7 +40,9 @@
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <input type="hidden" name="quantity" value="1">
                         <button
-                            class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10">
+                            id="cartButton"
+                            class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10"
+                            onclick="highlightButton()">
                             Add To Cart
                         </button>
                     </form>
@@ -84,4 +86,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function highlightButton() {
+            var button = document.getElementById('cartButton');
+
+            // Change color and text
+            button.innerHTML = 'Added to Cart';
+
+            // Reset color and text after 5 seconds
+            setTimeout(function() {
+                button.innerHTML = 'Add To Cart';
+            }, 5000);
+        }
+    </script>
+
 @endsection
