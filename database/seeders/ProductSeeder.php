@@ -59,7 +59,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
-            'name' => 'Seagate Barracuda 4TB Internal Hard Drive',
+            'name' => 'Seagate Barracuda 4TB',
             'description' => 'Unlock the power of storage with the Seagate Barracuda 4TB Internal Hard Drive. This high-capacity HDD is a reliable solution for all your storage and backup needs. Boasting a massive 6TB storage capacity, Seagate IronWolf Pro NAS HDD, 32GB of DDR4 RAM, and a speedy 512GB SSD, the Barracuda ensures that you never run out of space while maintaining top-notch performance. Trust in Seagate for efficient, dependable, and high-capacity storage solutions.',
             'quantity' => 300,
             'price' => 99.99,
