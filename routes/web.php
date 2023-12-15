@@ -75,6 +75,7 @@ Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'showPro
 Route::post('/profile/change-password', [App\Http\Controllers\ProfileController::class, 'changePassword'])->name('profile.changePassword');
 
 
+Route::post('/cartMinus', [CartController::class, 'minusQuantity'])->name('minusQuantity');
 
 
 

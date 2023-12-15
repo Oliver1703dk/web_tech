@@ -14,51 +14,37 @@ class CartController extends Controller {
     {
         return view('cart');
     }
-//    public function addItem(Product $product, $quantity = 1) {
-//
-//        //TODO: When not logged in, it goes to the login page.
-//        // Should this be changed?
-//        if (auth()->check()) {
-//            // User is logged in
-//
-//        } else {
-//            // User is not logged in
-////            return view('login');
-//            return redirect(route('login'))->with('failed', 'Not logged in');
-//        }
-//
-//        // The authenticated user is automatically injected into the method
-//        $user = auth()->user();
-//
-//        // Check if the user has a cart
-//        if ($user->cart) {
-//            $cart = $user->cart;
-//        } else {
-//            // If the user doesn't have a cart, create a new one
-//            $cart = new Cart();
-//            $user->cart()->save($cart);
-//        }
-//
-//        // Access the cart items using $cart->items
-//        if (isset($cart->items[$product->id])) {
-//            $cart->items[$product->id]['quantity'] += $quantity;
-//        } else {
-//            $cart->items[$product->id] = [
-//                'product' => $product,
-//                'quantity' => $quantity
-//            ];
-//        }
-//
-//        //THE METHOD CAN BE USED LIKE THIS
-//        // Assuming you have an instance of the Cart class
-//        //$cart = new Cart();
-//
-//        // Assuming you have an instance of the Product class
-//        //$product = Product::find(1);
-//
-//        // Add the product to the cart with a quantity of 2
-//        //$cart->addProduct($product, 2);
-//    }
+
+
+    public function minusQuantity(Request $request){
+        $productId = $request->input('product_id');
+
+
+        // Check if the user is authenticated
+        if (auth()->check()) {
+            $user = auth()->user();
+
+            // Check if the user has a cart
+            if ($user->cart) {
+                $cart = $user->cart;
+
+            } else {
+                // If the user doesn't have a cart, create a new one
+                $cart = new Cart();
+                $user->cart()->save($cart);
+            }
+            $cart->minusItem($productId);
+            return redirect()->back()->with('success', 'Product minus one to cart successfully.');
+
+
+        } else {
+            // User is not logged in
+            return redirect(route('cart'))->with('failed', 'Not added to cart');
+        }
+
+
+    }
+
     public function addItem(Request $request)
 //    public function addItem(Product $product, $quantity = 1)
     {
@@ -81,41 +67,6 @@ class CartController extends Controller {
 
             // Add the product to the cart
             $cart->addItem($productId, $quantity);
-
-//            $existingProduct = $cart->products()->where('product_id', $product->id)->first();
-//
-////            if ($existingProduct) {
-////                // Get the current quantity of the product in the cart
-////                $currentQuantity = $existingProduct->pivot->quantity;
-////
-////                // Calculate the new quantity
-////                $newQuantity = $currentQuantity + $quantity;
-////
-////                // Update the quantity of the product in the cart
-////                $existingProduct->pivot->quantity = $newQuantity;
-////                $existingProduct->pivot->save();
-////
-////                // If the product already exists in the cart, update the quantity
-//////                $existingProduct->pivot->quantity += $quantity;
-//////                $existingProduct->pivot->save();
-////            } else {
-////                // If the product is not in the cart, attach it with the given quantity
-////                // TODO: Id is changed
-////                dd($product);
-////                $cartProduct = new CartProduct();
-////                $cartProduct->cart_id = $cart->id;
-////                $cartProduct->product_id = $product->id;
-////                $cartProduct->quantity = $quantity;
-////                $cartProduct->save();
-////
-////
-//////                $this->products()->attach($product, ['quantity' => $quantity]);
-////            }
-
-
-
-
-
 
             return redirect()->back()->with('success', 'Product added to cart successfully.');
         } else {

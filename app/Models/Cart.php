@@ -22,6 +22,22 @@ class Cart extends Model
         return $this->belongsTo(User::class, 'cart_id', 'id');
     }
 
+    public function minusItem($productId)
+    {
+        $existingProduct = $this->products()->where('product_id', $productId)->first();
+
+
+        if ($existingProduct && $existingProduct->pivot->quantity > 0) {
+            // Decrement the quantity by 1
+            $existingProduct->pivot->quantity -= 1;
+            $existingProduct->pivot->save();
+
+            // Optional: remove the product from the cart if the quantity is 0
+            if ($existingProduct->pivot->quantity === 0) {
+                $this->products()->detach($productId);
+            }
+        }
+    }
 
 
 
