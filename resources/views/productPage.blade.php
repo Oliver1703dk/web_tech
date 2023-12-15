@@ -4,7 +4,7 @@
 
 @section("content")
     <div class="flex-1">
-        <div class="h-[91px] bg-amber-500"></div>
+        <div class="mb-10"></div>
 
         <div class="grid grid-cols-2 gap-4 h-fit">
             <div>
