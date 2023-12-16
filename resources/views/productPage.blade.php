@@ -5,12 +5,34 @@
 @section("content")
     <div class="flex-1">
         <div class="mb-10"></div>
+        <div>
+            @auth()
+                @if(auth()->user() && auth()->user()->admin)
+                    <form method="POST" action={{ route('deleteProduct') }}>
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <label>
+                            <button type = "submit" class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+                                Delete product
+                            </button>
+                        </label>
+                    </form>
+                @endif
+
+            @endauth
+        </div>
 
         <div class="grid grid-cols-2 gap-4 h-fit">
             <div>
-                <img class="h-[374px] mx-auto my-auto" src="{{ $product->image }}" alt="Error"/>
+                <img class="h-[374px] mx-auto my-auto" id="productImage" src="{{ $product->image }}" alt="Error"/>
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
+            <script>
+                document.getElementById('productImage').addEventListener('click', function() {
+                    this.classList.toggle('scale-150');
+                });
+            </script>
+
             <div>
                 <p class="text-xl font-bold">Name: {{ $product->name }}</p>
                 <br>
@@ -34,18 +56,19 @@
                 </div>
 
                 <div class="h-24 border-t-2 border-b-2 border-amber-500 mb-4 w-full flex items-center justify-center">
-                    <form method="POST" action={{ route('addItem') }}>
-                        {{--    <form method="POST" action={{ route('addItem', ['product' => $Product->id]) }}>--}}
+                    <form method="POST" action="{{ route('addItem') }}">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <input type="hidden" name="quantity" value="1">
                         <button
                             id="cartButton"
                             class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-xl font-KronaOne w-48 h-10"
-                            onclick="highlightButton()">
-                            Add To Cart
+                            onclick="highlightButton()"
+                            @if($product->quantity === 0) disabled @endif>
+                            {{ $product->quantity === 0 ? 'Out of Stock' : 'Add To Cart' }}
                         </button>
                     </form>
+
                 </div>
             </div>
         </div>

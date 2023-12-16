@@ -10,21 +10,5 @@
         </form>
     </div>
 </article>
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        // Select the button after the DOM is fully loaded
-        const dynamicButton = document.querySelector('.dynamicButton');
 
-        if (dynamicButton) {
-            // Add mouseover event listener
-            dynamicButton.addEventListener('mouseover', function() {
-                this.style.backgroundColor = '#007bff'; // Change color on hover
-            });
 
-            // Add mouseout event listener
-            dynamicButton.addEventListener('mouseout', function() {
-                this.style.backgroundColor = '#1d4ed8'; // Revert color when not hovering
-            });
-        }
-    });
-</script>

@@ -7,6 +7,26 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+
+    public function deleteProduct(Request $request){
+        $productId = $request->input('product_id');
+
+        // Find the product by ID
+        $product = Product::find($productId);
+
+        if ($product) {
+            // Delete the product
+            $product->delete();
+
+            // Redirect or return a response
+            return redirect()->route('index')->with('success', 'Product deleted successfully.');
+        } else {
+            // Handle the case where the product does not exist
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+
+    }
+
     public function productPage(Request $request)
     {
         $productId = $request->input('product_id');
@@ -70,7 +90,7 @@ class ProductController extends Controller
         $product->save();
 
         // Redirect or return a response
-        return redirect()->route('index'); // Replace 'some.route.name' with the appropriate route
+        return redirect()->route('index');
     }
 
 

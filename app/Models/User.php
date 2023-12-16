@@ -13,7 +13,7 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
 
-    protected $fillable = ['username', 'password', 'email', 'phone', 'admin', 'cart_id'];
+    protected $fillable = ['password', 'email', 'phone', 'admin', 'cart_id'];
 
     public function cart()
     {

@@ -23,6 +23,7 @@
 
         <!-- Cart Items Section -->
         <div class="m-10">
+
             <div class="bg-white rounded-lg shadow-md p-6 h-96 grid content-between">
                 <h2 class="text-lg font-semibold mb-4">Summary</h2>
                 <div class="flex justify-between mb-2">
@@ -38,7 +39,10 @@
                     <span class="font-semibold">Total</span>
                     <span class="font-semibold">${{ number_format($subtotal, 2) }}</span>
                 </div>
-                <button class="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
+                <form method="GET" action="{{ route('checkoutPage') }}">
+                    @csrf
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4 w-full">Checkout</button>
+                </form>
             </div>
 
             <div>

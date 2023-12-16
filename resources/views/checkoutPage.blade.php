@@ -37,6 +37,13 @@
 
 
     <div class="w-full lg:w-1/2 p-5">
+        @php $subtotal = 0; @endphp
+        @foreach ($cartItems as $productList)
+            @php $subtotal = $subtotal + $productList['product']->price * $productList['quantity']; @endphp
+{{--            @include("components.productBoxCartPage", [--}}
+{{--                "Product" => $productList--}}
+{{--            ])--}}
+        @endforeach
 
         <div id="summaryBox" class="max-w-sm lg:mx-0 mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
             <div class="p-5">
@@ -44,20 +51,20 @@
                 <div class="space-y-2 mt-3">
                     <div class="flex justify-between">
                         <span>Subtotal:</span>
-                        <span id="subtotalPrice">-</span>
+                        <span id="subtotalPrice">${{ number_format($subtotal, 2) }}</span>
                     </div>
-                    <div class="flex justify-between">
-                        <span>Tax:</span>
-                        <span id="taxPrice">-</span>
-                    </div>
+{{--                    <div class="flex justify-between">--}}
+{{--                        <span>Tax:</span>--}}
+{{--                        <span id="taxPrice">-</span>--}}
+{{--                    </div>--}}
                     <div class="flex justify-between">
                         <span>Delivery:</span>
-                        <span id="deliveryPrice">-</span>
+                        <span id="deliveryPrice">Free shipping</span>
                     </div>
                     <div class="border-t border-gray-200 pt-2 mt-2">
                         <div class="flex justify-between font-semibold">
                             <span>Total:</span>
-                            <span id="totalPrice">-</span>
+                            <span id="totalPrice">${{ number_format($subtotal, 2) }}</span>
                         </div>
                     </div>
                 </div>
