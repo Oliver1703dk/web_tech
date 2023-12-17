@@ -33,7 +33,24 @@ class CartController extends Controller {
                 $cart = new Cart();
                 $user->cart()->save($cart);
             }
-            $cart->minusItem($productId);
+
+
+            // Code to minus that item
+            $existingProduct = $cart->products()->where('product_id', $productId)->first();
+
+
+            if ($existingProduct && $existingProduct->pivot->quantity > 0) {
+                // Decrement the quantity by 1
+                $existingProduct->pivot->quantity -= 1;
+                $existingProduct->pivot->save();
+
+                // Optional: remove the product from the cart if the quantity is 0
+                if ($existingProduct->pivot->quantity === 0) {
+                    $cart->products()->detach($productId);
+                }
+            }
+
+//            $cart->minusItem($productId);
             return redirect()->back()->with('success', 'Product minus one to cart successfully.');
 
 
@@ -68,7 +85,21 @@ class CartController extends Controller {
             }
 
             // Add the product to the cart
-            $cart->addItem($productId, $quantity);
+
+            $existingProduct = $cart->products()->where('product_id', $productId)->first();
+
+            if ($existingProduct) {
+                // If the product already exists in the cart, update the quantity
+                $existingProduct->pivot->quantity += $quantity;
+                $existingProduct->pivot->save();
+            } else {
+                // If the product is not in the cart, attach it with the given quantity
+
+                $cart->products()->attach($productId, ['quantity' => $quantity]);
+            }
+
+
+//            $cart->addItem($productId, $quantity);
 
             return redirect()->back()->with('success', 'Product added to cart successfully.');
         } else {

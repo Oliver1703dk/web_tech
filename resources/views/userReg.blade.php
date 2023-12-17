@@ -63,6 +63,14 @@
                     Create Account
                 </button>
             </div>
+{{--            Admin shit--}}
+{{--            <div>--}}
+{{--                <label class="block mb-1.5 ml-6 mt-4 text-4xl font-['Krona One'] font-medium text-white dark:text-white scale-95">Register as Admin</label>--}}
+{{--                <div class="relative mb-6  ml-8 w-full">--}}
+{{--                    <input type="checkbox" name="admin" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500" value="1">--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
         </div>
         <!-- Here Ends the component -->
 

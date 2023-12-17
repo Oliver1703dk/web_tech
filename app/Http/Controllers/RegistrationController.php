@@ -23,7 +23,7 @@ class RegistrationController extends Controller
             'email' => 'required|email|unique:users',
             'password' => 'required|min:1',
             'rpassword' => 'required|same:password',
-            'phone' => 'required|numeric',
+            'phone' => 'required|numeric'
         ], [
             'rpassword.same' => 'The password and confirmation password do not match.',
         ]);
@@ -52,6 +52,8 @@ class RegistrationController extends Controller
         $user->password = $request->password;
         //$customer->password = Hash::make($request->password);
         $user->phone = $request->phone;
+//        $user->admin = $request->has('admin');
+
         $user->admin = false;
         $user->cart_id;
 
@@ -59,10 +61,7 @@ class RegistrationController extends Controller
 
         $user->save();
 
-//        $credentials = [
-//            'email' => $user->email,
-//            'password' => $user->password,
-//        ];
+
 
         Auth::login($user);
 

@@ -54,8 +54,10 @@ Route::get("/login", [AuthenticationController::class, 'login'])->name('login');
 Route::post('/login', [AuthenticationController::class, 'loginPost'])->name('loginPost');
 Route::post('/logout', [AuthenticationController::class, 'logoutPost'])->name('logoutPost');
 
-Route::get('/checkoutPage' , [PaymentController::class, 'checkoutPage'])->name('checkoutPage');
+Route::get('/checkoutPage' , [PaymentController::class, 'indexCheckoutPage'])->name('checkoutPage');
 Route::post('/checkoutPagePost', [PaymentController::class, 'checkoutPagePost'])->name('checkoutPagePost');
+
+//Route::post('/paymentComplete', [PaymentController::class, 'checkoutPagePost'])->name('paymentComplete');
 
 
 Route::get('/productPage' , [ProductController::class, 'productPage'])->name('productPage');
@@ -85,6 +87,8 @@ Route::post('/cartMinus', [CartController::class, 'minusQuantity'])->name('minus
 Route::get('/productPageAdmin', [productController::class, 'productPageAdmin'])->name('productPageAdmin');
 
 Route::post('/addProductDB', [ProductController::class, 'addProductDB'])->name('addProductDB');
+Route::post('/deleteProduct', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
+
 
 
 
