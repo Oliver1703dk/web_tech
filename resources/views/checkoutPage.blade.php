@@ -6,7 +6,7 @@
 
 <form method="POST" action={{route('checkoutPagePost')}}>
     @csrf
-<div class="flex flex-wrap mx-auto max-w-screen-xl p-5">
+<div class="flex flex-wrap mx-auto max-w-screen-xl p-5 h-screen">
 
 
     <div class="w-full lg:w-1/2 p-5">
