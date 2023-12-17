@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i7-9700K processor',
             'product_info3' => '16GB DDR4 RAM',
             'product_info4' => '240GB SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://www.elgiganten.dk/image/dv_web_D1800010021336299/539209/pcspecialist-fusion-x90s-i9k-133220004090-stationar-gaming-computer--pdp_zoom-3000--pdp_main-540.jpg'
         ]);
 
         Product::create([
@@ -31,7 +31,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i5 processor',
             'product_info3' => '8GB LPDDR4x RAM',
             'product_info4' => '256GB PCIe NVMe SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://compware.dk/wp-content/uploads/2022/12/RGB-Gamer-PC.webp'
         ]);
 
         Product::create([
@@ -43,7 +43,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i9-9900K processor',
             'product_info3' => '32GB DDR4 RAM',
             'product_info4' => '480GB SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://i.pinimg.com/564x/37/41/52/374152fb11841914de5c4f54db2e7dce.jpg'
         ]);
 
         Product::create([
@@ -55,7 +55,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i7 processor',
             'product_info3' => '16GB LPDDR4x RAM',
             'product_info4' => '512GB PCIe NVMe SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://geekd.dk/cdn/shop/products/60240670f3f25672207245.jpg?v=1642683256'
         ]);
 
         Product::create([
@@ -67,7 +67,7 @@ class ProductSeeder extends Seeder
             'product_info2' => 'Intel Core i7-9700K processor',
             'product_info3' => '16GB DDR4 RAM',
             'product_info4' => '240GB SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://www.avxperten.dk/billeder/cooler-master-masterbox-520-mesh-gamer-pc-kabinet-rgb-atx-ssi-mini-itx-sort-big.jpg'
         ]);
 
         Product::create([
@@ -79,7 +79,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i5 processor',
             'product_info3' => '8GB LPDDR4x RAM',
             'product_info4' => '256GB PCIe NVMe SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://shoppia.dk/wp-content/uploads/2023/07/Begynder-Gaming-Computer-2-scaled.jpg'
         ]);
 
         Product::create([
@@ -91,7 +91,7 @@ class ProductSeeder extends Seeder
             'product_info2' => '11th Gen Intel Core i7 processor',
             'product_info3' => '16GB LPDDR4x RAM',
             'product_info4' => '512GB PCIe NVMe SSD',
-            'image'=> 'https://static.thenounproject.com/png/1226185-200.png'
+            'image'=> 'https://compware.dk/wp-content/uploads/2022/12/Begynder-Gaming-Computer-2.png'
         ]);
 
 

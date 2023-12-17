@@ -74,6 +74,8 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
 
+Route::get('/productsCatalog', [ProductController::class, 'indexProducts'])->name('productsCatalog');
+
 Route::post('/', [ProfileController::class, 'changePassword'])->name('changePassword');
 
 

@@ -42,6 +42,20 @@ class ProductController extends Controller
         return view('index', compact('products'));
     }
 
+    public function indexProducts()
+    {
+        // Fetch products from the database
+        $products = Product::all();
+
+//        dd("Index method called");
+//        dd($products);
+
+
+
+        // Pass the products to the view
+        return view('productsCatalog', compact('products'));
+    }
+
     public function productPageAdmin(){
         return view('productPageAdmin');
     }
@@ -49,7 +63,7 @@ class ProductController extends Controller
     public function addProductDB(Request $request){
         // Retrieve product data from the request
         $data = $request->only([
-            'name', 'price', 'qty', 'storage', 'CPU', 'RAM', 'SSD', 'Desc'
+            'name', 'price', 'qty', 'storage', 'CPU', 'RAM', 'SSD', 'Desc', 'Image'
         ]);
 
         // Optional: Validate the data here
@@ -64,7 +78,7 @@ class ProductController extends Controller
         $product->product_info2 = $data['CPU'];
         $product->product_info3 = $data['RAM'];
         $product->product_info4 = $data['SSD'];
-        $product->image = 'https://static.thenounproject.com/png/1226185-200.png'; // Handle image upload if necessary
+        $product->image = $data['Image'];
 
         // Save the product
         $product->save();
