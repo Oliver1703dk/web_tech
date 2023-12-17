@@ -1,9 +1,9 @@
-<article class="bg-white shadow-md p-4">
-    <div class="grid grid-rows-3 items-center" style="max-height: 400px;">
+<article class="bg-white shadow-md p-4 m-1 rounded-lg">
+    <div class="grid grid-rows-3 justify-items-center" style="max-height: 300px;">
         <div>
-            <img src="{{ $Product->image }}" style="max-height: 150px;" alt="{{ $Product->name }}">
+            <img src="{{ $Product->image }}" style="max-height: 130px;" alt="{{ $Product->name }}">
         </div>
-        <div class="mt-10">
+        <div class="mt-8">
             <h2 class="text-lg font-semibold">{{ $Product->name }}</h2>
         </div>
         <div class="mt-10">

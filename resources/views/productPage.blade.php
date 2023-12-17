@@ -12,8 +12,8 @@
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <label>
-                            <button type = "submit" class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
-                                Delete product
+                            <button type="submit" class="text-white bg-red-600 hover:bg-red-300 w-fit h-fit p-2 m-1">
+                                X - Delete Product
                             </button>
                         </label>
                     </form>
@@ -28,7 +28,7 @@
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
             <script>
-                document.getElementById('productImage').addEventListener('click', function() {
+                document.getElementById('productImage').addEventListener('click', function () {
                     this.classList.toggle('scale-150');
                 });
             </script>
@@ -118,7 +118,7 @@
             button.innerHTML = 'Added to Cart';
 
             // Reset color and text after 5 seconds
-            setTimeout(function() {
+            setTimeout(function () {
                 button.innerHTML = 'Add To Cart';
             }, 5000);
         }

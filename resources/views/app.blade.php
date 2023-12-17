@@ -12,10 +12,7 @@
 <header>
     <nav class="bg-amber-400 border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-{{--            <a href="http://127.0.0.1:8000" class="flex items-center">--}}
-{{--                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/>--}}
-{{--                <span class="self-center text-xl font-semibold whitespace-nowrap">AllYouNeedPC</span>--}}
-{{--            </a>--}}
+
             <form action="{{ route('index') }}" method="get">
                 <button type="submit" class="flex items-center">
                     <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/>
@@ -35,7 +32,7 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search"
-                           class="block w-[40rem] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+                           class="block w-[35rem] p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
                            placeholder="Search Mockups, Logos..." required>
                     <button type="submit"
                             class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
