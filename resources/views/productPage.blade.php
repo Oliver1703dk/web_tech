@@ -27,11 +27,7 @@
                 <img class="h-[374px] mx-auto my-auto" id="productImage" src="{{ $product->image }}" alt="Error"/>
                 <p class="border-b-2 border-amber-500 mb-4 w-full"></p>
             </div>
-            <script>
-                document.getElementById('productImage').addEventListener('click', function () {
-                    this.classList.toggle('scale-150');
-                });
-            </script>
+
 
             <div>
                 <p class="text-xl font-bold">Name: {{ $product->name }}</p>
@@ -122,6 +118,11 @@
                 button.innerHTML = 'Add To Cart';
             }, 5000);
         }
+    </script>
+    <script>
+        document.getElementById('productImage').addEventListener('click', function () {
+            this.classList.toggle('scale-150');
+        });
     </script>
 
 @endsection

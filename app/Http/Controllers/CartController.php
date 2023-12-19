@@ -81,11 +81,9 @@ class CartController extends Controller {
                 // If the user doesn't have a cart, create a new one
                 $cart = new Cart();
                 $user->cart()->save($cart);
-
             }
 
             // Add the product to the cart
-
             $existingProduct = $cart->products()->where('product_id', $productId)->first();
 
             if ($existingProduct) {
