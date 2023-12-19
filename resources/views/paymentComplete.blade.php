@@ -9,7 +9,7 @@
 </div>
 
 <div>
-    <img src="Images/verifylogo.png">
+    <img src="https://cdn.iconscout.com/icon/free/png-256/free-verify-perfect-heavy-check-mark-38018.png">
 </div>
 
 <div>
