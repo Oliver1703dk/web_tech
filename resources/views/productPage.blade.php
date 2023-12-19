@@ -112,13 +112,13 @@
 
             // Change color to green and text
             button.innerHTML = 'Added to Cart';
-            button.style.backgroundColor = '#90EE90'; // Set the background color to green
+            button.style.backgroundColor = '#90EE90'; // Set the background color to light-green
 
-            // Reset color and text after 5 seconds
+            // Reset color and text after 1 seconds
             setTimeout(function () {
                 button.innerHTML = 'Add To Cart';
                 button.style.backgroundColor = ''; // Reset the background color
-            }, 5000);
+            }, 1000);
         }
     </script>
     <script>
