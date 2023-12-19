@@ -114,14 +114,17 @@
         function highlightButton() {
             var button = document.getElementById('cartButton');
 
-            // Change color and text
+            // Change color to green and text
             button.innerHTML = 'Added to Cart';
+            button.style.backgroundColor = '#90EE90'; // Set the background color to green
 
             // Reset color and text after 5 seconds
             setTimeout(function () {
                 button.innerHTML = 'Add To Cart';
+                button.style.backgroundColor = ''; // Reset the background color
             }, 5000);
         }
     </script>
+
 
 @endsection

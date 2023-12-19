@@ -101,9 +101,11 @@ class CartController extends Controller {
 
 //            $cart->addItem($productId, $quantity);
 
+            sleep(1); // Add a 3-second delay
             return redirect()->back()->with('success', 'Product added to cart successfully.');
         } else {
             // User is not logged in
+            sleep(1); // Add a 3-second delay
             return redirect(route('login'))->with('failed', 'Not logged in');
         }
     }
