@@ -55,7 +55,6 @@
                         </label>
 
                     </form>
-
                 @auth()
                         @if(auth()->user() && auth()->user()->admin)
                             <form method="GET" action={{route('productPageAdmin')}}>
@@ -67,7 +66,6 @@
                                 </label>
                             </form>
                         @endif
-
                 @endauth
 
                 @guest()
@@ -81,7 +79,6 @@
                                 Profile
                             </button>
                         </label>
-
                     </form>
                 @endauth
                 @guest()

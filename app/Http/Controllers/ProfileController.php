@@ -11,24 +11,15 @@ class ProfileController extends Controller
     public function showProfile()
     {
         $user = auth()->user();
-        $userEmail = $user->email;
-
 
 
         return view('profile', compact('user'));
 
-//        return view('profile', [
-//            'user' => $user,
-//            'userEmail' => $userEmail
-//        ]);
     }
 
     public function changePassword(Request $request)
     {
         $user = Auth::user();
-//        $oldPassword = $request->input('passwordOld');
-//        $new1Password = $request->input('passwordNew1');
-//        $new2Password = $request->input('passwordNew2');
 
         $request->validate([
             'passwordOld' => 'required',
