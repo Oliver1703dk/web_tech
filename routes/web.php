@@ -22,9 +22,7 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('index');
-//})->name('index');;
+
 
 Route::get('/test', function () {
     return view('test');
@@ -67,9 +65,6 @@ Route::post('/addItem', [CartController::class, 'addItem'])->name('addItem');
 
 Route::get('/', [ProductController::class, 'index'])->name('index');
 
-//Route::get('/cart', [CartController::class, 'index'])->name('cart');
-
-//Route::get('/cart', [CartController::class, 'index'])->name('cart');
 
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 

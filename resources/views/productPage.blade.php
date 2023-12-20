@@ -118,7 +118,7 @@
             setTimeout(function () {
                 button.innerHTML = 'Add To Cart';
                 button.style.backgroundColor = ''; // Reset the background color
-            }, 1000);
+            }, 500);
         }
     </script>
     <script>
