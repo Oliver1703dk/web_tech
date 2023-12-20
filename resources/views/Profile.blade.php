@@ -4,34 +4,6 @@
 
 @section("content")
 
-{{--    <div class="h-screen">--}}
-{{--        <h1>Profile</h1>--}}
-
-{{--        <p>Email: {{ $userEmail }}</p>--}}
-
-{{--        <h2>Change Password</h2>--}}
-{{--        <form action="{{ route('profile.changePassword') }}" method="post">--}}
-{{--            @csrf--}}
-
-{{--            <label for="oldPassword">Old Password:</label>--}}
-{{--            <input type="password" id="oldPassword" name="oldPassword" required>--}}
-{{--            @error('oldPassword')--}}
-{{--            <p class="error">{{ $message }}</p>--}}
-{{--            @enderror--}}
-{{--            <br>--}}
-{{--            <label for="newPassword">New Password:</label>--}}
-{{--            <input type="password" id="newPassword" name="newPassword" required>--}}
-{{--            @error('newPassword')--}}
-{{--            <p class="error">{{ $message }}</p>--}}
-{{--            @enderror--}}
-{{--            <br>--}}
-{{--            <label for="newPasswordConfirmation">Confirm Password:</label>--}}
-{{--            <input type="password" id="newPasswordConfirmation" name="newPasswordConfirmation" required>--}}
-{{--            <br>--}}
-{{--            <button type="submit">Change Password</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
-
     <section class="bg-amber-500">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div

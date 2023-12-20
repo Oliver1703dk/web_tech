@@ -62,12 +62,7 @@
                         login
                     </button>
 
-{{--                    <a href="/"--}}
-{{--                       class="text-white bg-amber-500 font-medium rounded-3xl hover:bg-amber-300 text-4xl font-KronaOne px-32 py-2.5 h-14">--}}
-{{--                        Login--}}
-{{--                    </a>--}}
                 </div>
-                <!-- Here Ends the component -->
             </form>
             <div class="relative mb-6 mt-12  ml-12 justify-center">
                 <a href="{{route("userReg")}}"

@@ -6,7 +6,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     @yield("head")
 
-    <!-- Include your CSS and other head elements here -->
 </head>
 <body>
 <header>
@@ -119,7 +118,7 @@
 
 
 <main>
-    @yield('content') <!-- This is where the content from individual views will be injected -->
+    @yield('content')
 </main>
 
 <footer class="bg-[#141414] text-white p-4 bottom-0 left-0 w-full">

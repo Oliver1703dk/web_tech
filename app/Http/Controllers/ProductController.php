@@ -40,7 +40,6 @@ class ProductController extends Controller
 
         // Check if product exists
         if (!$product) {
-            // Handle the case where the product is not found, e.g., redirect or show an error message
             return redirect()->back()->withErrors('Product not found.');
         }
 
@@ -49,18 +48,12 @@ class ProductController extends Controller
         return view('productPage', compact('product'));
 
 
-//        return view('productPage')->with(["products"=>$products]);
     }
 
-    // Assuming this is part of your controller method
     public function index()
     {
         // Fetch products from the database
         $products = Product::all();
-
-//        dd("Index method called");
-//        dd($products);
-
 
         // Pass the products to the view
         return view('index', compact('products'));
@@ -70,11 +63,6 @@ class ProductController extends Controller
     {
         // Fetch products from the database
         $products = Product::all();
-
-//        dd("Index method called");
-//        dd($products);
-
-
 
         // Pass the products to the view
         return view('productsCatalog', compact('products'));

@@ -22,20 +22,7 @@ class Product extends Model
         "image",
     ];
 
-    // Explicitly specify the primary key
     protected $primaryKey = 'id';
-
-//    private $id;
-//    private $name;
-//    private $price;
-//    private $description;
-//    private $quantity;
-//    private $product_info1;
-//    private $product_info2;
-//    private $product_info3;
-//    private $product_info4;
-//    private $image;
-
 
 
 
@@ -43,13 +30,6 @@ class Product extends Model
     {
         return $this->belongsToMany(Cart::class, 'cart_product', 'product_id', 'cart_id')->withPivot('quantity');
     }
-
-//    public function category()
-//    {
-//        return $this->belongsTo(Category::class);
-//    }
-
-
 
 
 }

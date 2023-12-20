@@ -6,7 +6,6 @@
     <div class="flex-1">
 
         <form method="POST" action={{ route('addProductDB') }}>
-            {{--    <form method="POST" action={{ route('addItem', ['product' => $Product->id]) }}>--}}
             @csrf
 
             <form class="h-screen"

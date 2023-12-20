@@ -89,7 +89,6 @@
                 </div>
                 <div>
                     <div class="grid grid-cols-2 gap-4">
-                        <!-- Sørger for der kun kan komme 2 productBox på den her side-->
                         <x-productBoxComponent
                             image="https://www.elgiganten.dk/image/dv_web_D1800010021488136/628230/macbook-air-15-m28256-2023-midnat.jpg"
                             title="Macbook 2023"

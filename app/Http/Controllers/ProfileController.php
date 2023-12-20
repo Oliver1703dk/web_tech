@@ -12,7 +12,6 @@ class ProfileController extends Controller
     {
         $user = auth()->user();
 
-
         return view('profile', compact('user'));
 
     }

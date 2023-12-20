@@ -65,11 +65,9 @@ class CartController extends Controller {
 
 
     public function addItem(Request $request)
-//    public function addItem(Product $product, $quantity = 1)
     {
         $productId = $request->input('product_id');
         $quantity = $request->input('quantity');
-//        dd($productId);
         // Check if the user is authenticated
         if (auth()->check()) {
             $user = auth()->user();
@@ -96,9 +94,6 @@ class CartController extends Controller {
                 $cart->products()->attach($productId, ['quantity' => $quantity]);
             }
 
-
-//            $cart->addItem($productId, $quantity);
-
             sleep(0.5); // Add a 1-second delay
             return redirect()->back()->with('success', 'Product added to cart successfully.');
         } else {
@@ -107,50 +102,9 @@ class CartController extends Controller {
             return redirect(route('login'))->with('failed', 'Not logged in');
         }
     }
-//    public function addItem(Request $request)
-//    {
-//        $productId = $request->input('productId');
-//
-//        // Validate the productId
-//        if (!isset($productId) || $productId < 1) {
-//            return redirect()->back()->with('error', 'Invalid product ID');
-//        }
-//
-//        // Check if the product is already in the cart
-//        $cartProduct = CartProduct::where('cart_id', $request->userId)
-//            ->where('product_id', $productId)
-//            ->first();
-//
-//        if ($cartProduct) {
-//            // If the product is already in the cart, update the quantity
-//            $cartProduct->quantity++;
-//            $cartProduct->save();
-//        } else {
-//            // If the product is not in the cart, add it to the cart
-//            $cartProduct = new CartProduct();
-//            $cartProduct->cart_id = $request->userId;
-//            $cartProduct->product_id = $productId;
-//            $cartProduct->quantity = 1;
-//            $cartProduct->save();
-//        }
-//
-//
-//        return redirect()->route('index')->with('success', 'Product added to cart');
-//    }
-
 
     public function getItems() {
         return $this->items;
-
-        //THE METHOD CAN BE USED LIKE THIS
-        // Assuming you have an instance of the Cart class
-        //$cart = new Cart();
-
-        // Get items from the cart
-        //$items = $cart->getItems();
-
-        // $items is an associative array containing products and their quantities in the cart
-        //var_dump($items);
 
     }
 
