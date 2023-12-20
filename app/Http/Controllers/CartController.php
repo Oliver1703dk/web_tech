@@ -20,7 +20,7 @@ class CartController extends Controller {
         $productId = $request->input('product_id');
 
 
-        // Check if the user is authenticated
+        // Checks if the user is authenticated
         if (auth()->check()) {
             $user = auth()->user();
 
