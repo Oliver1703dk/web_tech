@@ -95,6 +95,5 @@ class ProductSeeder extends Seeder
         ]);
 
 
-        // Add more product records as needed
     }
 }

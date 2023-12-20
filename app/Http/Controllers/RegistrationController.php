@@ -28,10 +28,6 @@ class RegistrationController extends Controller
             'rpassword.same' => 'The password and confirmation password do not match.',
         ]);
 
-//        // If validation fails, redirect back with errors
-//        if ($validator->fails()) {
-//            return Redirect::back()->withInput()->withErrors($validator);
-//        }
 
         // Check if a user with the given email already exists
         $existingUser = User::where('email', $request->email)->first();
@@ -50,9 +46,7 @@ class RegistrationController extends Controller
 
         $user->email = $request->email;
         $user->password = $request->password;
-        //$customer->password = Hash::make($request->password);
         $user->phone = $request->phone;
-//        $user->admin = $request->has('admin');
 
         $user->admin = false;
         $user->cart_id;
@@ -65,18 +59,7 @@ class RegistrationController extends Controller
 
         Auth::login($user);
 
-//        Auth::attempt($credentials);
-
-//        if (Auth::attempt($credentials)) {
-//
-////            return redirect('/')->with('success', 'login');
-//        }
-
-//        return Redirect::to(route('index'))->with('success', 'Register successfully');
-
         return redirect(route('index'))->with('success', 'Register sucessfully');
-//        return back()->with('success', 'Register sucessfully');
-
 
     }
 

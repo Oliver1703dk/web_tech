@@ -6,10 +6,8 @@
 
     <div class="grid grid-cols-2 gap-4 bg-amber-500">
 
-        <!-- User's products Section -->
         <div>
             <div class="grid grid-cols-2 gap-4 m-10">
-                <!-- Produkter nedenunder er ikke dem der er i users cart-->
                 @php $subtotal = 0; @endphp
                 @foreach ($cartItems as $productList)
                     @php $subtotal = $subtotal + $productList['product']->price * $productList['quantity']; @endphp
@@ -54,7 +52,6 @@
                         </p>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
-                        <!-- Sørger for der kun kan komme 2 productBox på den her side-->
                         <x-productBoxComponent
                             image="https://www.elgiganten.dk/image/dv_web_D1800010021488136/628230/macbook-air-15-m28256-2023-midnat.jpg"
                             title="Macbook 2023"

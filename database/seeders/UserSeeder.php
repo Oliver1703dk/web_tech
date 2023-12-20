@@ -23,7 +23,6 @@ class UserSeeder extends Seeder
             'phone' => '123',
             'admin' => true,
             'cart_id' => $cart->id,
-            // If 'cart_id' is supposed to be dynamically generated or linked to a Cart model, you might need additional logic here
         ]);
     }
 }
